@@ -1,13 +1,18 @@
-/* Giới thiệu một số hàm built-in
-1. Alert
-2. Console
-3. Confirm
-4. Prompt
-5. Set timeout
-6. Set interval
-*/
+/**
+ *
+ * Giới thiệu về toán tử trong Javascript
+ * 1. Toán tử số học - Arithmeic
+ * 2. Toán tử gán - Assignment
+ * 3. Toán tử so sánh - Comparison
+ * 4. Toán tử logic - Logical
+ *
+ *
+ */
 
-setInterval(function () {
-  alert("Thong bao");
-}, 1000);
-// setInterval thực thi liên tục, sau một khoảng thời gian đã xác nhận.
+var a = 1;
+var b = 2;
+
+if (a < b) {
+  // code ne
+  alert("dung");
+}
