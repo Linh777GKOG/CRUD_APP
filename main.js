@@ -1,21 +1,13 @@
-var fullName = "Vu Duc Linh";
-var age = 18;
+/* Giới thiệu một số hàm built-in
+1. Alert
+2. Console
+3. Confirm
+4. Prompt
+5. Set timeout
+6. Set interval
+*/
 
-alert(fullName);
-alert(age);
-
-// khai bao alert
-/**
- * 1
- * 2
- * 3
- * 4
- * 5
- * 6
- * 8
- * 8
- * 9
- * 10
- * wtf
- *
- */
+setInterval(function () {
+  alert("Thong bao");
+}, 1000);
+// setInterval thực thi liên tục, sau một khoảng thời gian đã xác nhận.
