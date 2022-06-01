@@ -12,7 +12,7 @@
 var a = 1;
 var b = 2;
 
-if (a < b) {
+if (a > 0 && b > 0) {
   // code ne
-  alert("dung");
+  alert("a & b lon hon 0");
 }
