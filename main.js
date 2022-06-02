@@ -13,9 +13,8 @@
 
 var number = 1;
 
-console.log(number++); // 1
-console.log(number); //2
+++number; // dung lam tien to, ++ o phia truoc bien
+console.log(number); // 2
 
-console.log(number++); // 2
+++number;
 console.log(number); // 3
-// Toán tử ++ khi dùng là hậu tố sẽ tăng giá trị của biến lên 1 và trả về giá trị trước khi tăng.
