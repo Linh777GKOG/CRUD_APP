@@ -13,6 +13,5 @@
 // Prefix & Postfix
 
 var a = 6;
-
-a--;
-console.log(a);
+var output = a++;
+console.log(output);
