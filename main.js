@@ -10,8 +10,12 @@
  */
 
 // Toán tử ++ giúp tăng giá trị của một biến mang giá trị số lên 1.
+
 var number = 1;
-number++; // dung lam hau to, ++ o phia sau bien
-console.log(number); // 2
-number++;
-console.log(number); //3
+
+console.log(number++); // 1
+console.log(number); //2
+
+console.log(number++); // 2
+console.log(number); // 3
+// Toán tử ++ khi dùng là hậu tố sẽ tăng giá trị của biến lên 1 và trả về giá trị trước khi tăng.
