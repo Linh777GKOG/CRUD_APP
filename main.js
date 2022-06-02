@@ -9,8 +9,9 @@
  *
  */
 
-var a = 1;
-
-a = a + 2;
-
-console.log(a);
+// Toán tử ++ giúp tăng giá trị của một biến mang giá trị số lên 1.
+var number = 1;
+number++; // dung lam hau to, ++ o phia sau bien
+console.log(number); // 2
+number++;
+console.log(number); //3
