@@ -10,11 +10,9 @@
  */
 
 // Toán tử ++ giúp tăng giá trị của một biến mang giá trị số lên 1.
+// Prefix & Postfix
 
-var number = 1;
+var a = 6;
 
-++number; // dung lam tien to, ++ o phia truoc bien
-console.log(number); // 2
-
-++number;
-console.log(number); // 3
+a--;
+console.log(a);
