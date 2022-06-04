@@ -1,23 +1,25 @@
-/**
- * Hàm  (function) trong JavaScript
- * 1. Hàm?
- *  - một khối mã
- *  - Làm một việc cụ thể
- * 2. Loại hàm
- *  - built-in
- *  - Tự định nghĩa
- * 3. Tính chất
- *  - Không thực thi khi định nghĩa
- *  - Sẽ thực thi khi được gọi
- *  - Có thể nhận tham số
- *  - Có thể trả về một 1 giá trị
- * 4. Tạo hàm đầu tiên
- */
-// a-z A-Z 0-9 _ $
-// khong dat so lam ky tu dau tien
-function showDialog() {
-  alert("Hi");
+// Tham so ham - Javascript co ban
+
+/* 
+1. Tham so?
+- Dinh nghia: Một giá trị có thể truyền vào khi gọi 1 function
+- Kieu du lieu?
+- Tinh private?
+- 1 tham so
+- Nhieu tham so
+2. Truyen tham so
+- 1 tham so
+- nhieu tham so
+
+3. Arguments
+- Doi tuong arguments
+- Gioi thieu vong for
+*/
+
+function writeLog(message) {
+  console.log(message);
+  // Dinh nghia, xuat hien, su dung trong ham goi la tham so
 }
 
-// call ()
-showDialog();
+writeLog("Test message");
+// Goi toi function, truyen gia tri vao => Đối số
