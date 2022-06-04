@@ -21,6 +21,7 @@ var a = 1;
 
 var b = 2;
 var c = 1.5;
+// console.log(typeof a);
 
 // String type
 var fullName = "Linh 'Vu";
@@ -30,22 +31,22 @@ var isSuccess = true;
 
 // Undefined type
 var age;
-console.log(age);
+// console.log(age);
 
 // null
 var isNull = null; //nothing
-console.log(isNull);
+console.log(typeof isNull);
+// typeof null = object??? wtf???//
 // Symbol
 var id = Symbol("id"); // unique
 var id2 = Symbol("id"); // unique
 
-console.log(id === id2);
-
 // Function
 var myFunction = function () {
-  alert("Hi, xin chao!");
+  //   alert("Hi, xin chao!");
 };
 // function tu dinh nghia
+console.log(typeof myFunction);
 
 myFunction();
 
@@ -62,6 +63,6 @@ var myObject = {
 var myArray = ["JavaScript", "PHP", "Ruby"];
 // array ko can dinh nghia key, trong array key được đánh
 // tự động bằng số tự tăng, bắt đầu là 0
-console.log(myArray);
+// console.log(myArray);
 
-console.log("myObject", myObject);
+// console.log("myObject", myObject);
