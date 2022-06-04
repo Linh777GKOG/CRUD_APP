@@ -1,24 +1,14 @@
 /**
- * If -else
+ * Toan tu logical
+ * 1. && - And
+ * || - Or
+ * ! - Not
  */
 
-/**
- * 0
- * false
- * '' - ""
- * undefined
- * NaN
- * null
- * = > khi convert sang Boolean se la false, khac 6 gia tri nay
- * deu la true
- */
+var a = 1;
+var b = 2;
+var c = 3;
 
-var fullName = 0;
-
-if (fullName) {
+if (!(a < 0)) {
   console.log("Dieu kien dung");
-} else {
-  console.log("Dieu kien sai");
 }
-
-// if va else ko quan tam gia tri nao khac ngoai boolean
