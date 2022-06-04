@@ -12,13 +12,7 @@
 // Toán tử ++ giúp tăng giá trị của một biến mang giá trị số lên 1.
 // Prefix & Postfix
 
-var a = 6;
-var output = a++;
-
-// viec 1: 'a copy', 'a copy' = 6
-// viec 2: cong  1 cho a, a = a + 1 => a = 7;
-// viec 3; tra ve 'a copy'
+var number = 6;
+var output = ++number * 2 - number-- * 2;
 
 console.log("output: ", output);
-
-console.log("a: ", a);
