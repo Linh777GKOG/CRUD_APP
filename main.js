@@ -1,5 +1,5 @@
-console.log(Boolean(1));
-console.log(Boolean(["BMW"]));
-console.log(Boolean({ name: "Miu" }));
-
-console.log(!!"Hi");
+console.log(!!1);
+// true
+console.log(!!"f8");
+console.log(!!["Mercedes"]);
+// them !! phia truoc cac gia tri truthy se luon tra ve true
