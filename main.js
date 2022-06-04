@@ -58,5 +58,10 @@ var myObject = {
   //name la key, linh vu la value, cach nhau bang dau :
   // giua mot cap key: value cach nhau bang 1 dau ,
 };
+// array cx thuoc object types
+var myArray = ["JavaScript", "PHP", "Ruby"];
+// array ko can dinh nghia key, trong array key được đánh
+// tự động bằng số tự tăng, bắt đầu là 0
+console.log(myArray);
 
 console.log("myObject", myObject);
