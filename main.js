@@ -1,12 +1,16 @@
 // Hiểu hơn về câu lệnh điều kiện
 // và phép so sánh
-//
+// 0 , '', null, undefined, NaN, false => convert sang boolean
+// se hieu la false, con lai la true
 //
 var a = 1;
 var b = 2;
 
-var result = a < b && a < 0;
-// ket qua cua phep so sanh thu 2, toan tu logic chi tra ve ket qua 1 trong 2 ve
+// su dung toan tu & dong ve trai qua ve phai,
+// gap gia tri khac 6 gia tri tren => doc sang ve phai
+// lay gia tri ve phai gan nguoc lai result
+var result = "A" && "B" && "C" && "NaN";
+console.log(result);
 
 // if nhan gia trij la true
 // if (a < b) {
