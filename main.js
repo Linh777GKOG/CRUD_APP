@@ -16,11 +16,15 @@
 - Gioi thieu vong for
 */
 
-function writeLog(message, message2) {
-  console.log(message);
-  console.log(message2);
-  // Dinh nghia, xuat hien, su dung trong ham goi la tham so
-}
+// function writeLog(message, message2) {
+// Dinh nghia, xuat hien, su dung trong ham goi la tham so
+// }
 
-writeLog("TEST", "TEST_2");
+// writeLog("Log1 ", "Log2");
+
 // Goi toi function, truyen gia tri vao => Đối số
+// console.log(1, 2, 3, 4, 5, 6);
+function writeLog() {
+  console.log(arguments);
+}
+writeLog("Log1", "Log2");
