@@ -1,10 +1,5 @@
-// Toan tu so sanh - P2
-/**
- * ===
- * !==
- *
- */
+console.log(Boolean(1));
+console.log(Boolean(["BMW"]));
+console.log(Boolean({ name: "Miu" }));
 
-var a = 1;
-var b = "1";
-console.log(a == b);
+console.log(!!"Hi");
