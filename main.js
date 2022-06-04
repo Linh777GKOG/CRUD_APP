@@ -1,10 +1,24 @@
 /**
- * Boolean
+ * If -else
  */
-// boolean chi the hien gia tri dung hay sai thoi
 
-var a = 1;
-var b = 2;
+/**
+ * 0
+ * false
+ * '' - ""
+ * undefined
+ * NaN
+ * null
+ * = > khi convert sang Boolean se la false, khac 6 gia tri nay
+ * deu la true
+ */
 
-var isSuccess = a > b;
-console.log(isSuccess);
+var fullName = 0;
+
+if (fullName) {
+  console.log("Dieu kien dung");
+} else {
+  console.log("Dieu kien sai");
+}
+
+// if va else ko quan tam gia tri nao khac ngoai boolean
