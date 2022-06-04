@@ -9,12 +9,13 @@ var b = 2;
 // su dung toan tu & dong ve trai qua ve phai,
 // gap gia tri khac 6 gia tri tren => doc sang ve phai
 // lay gia tri ve phai gan nguoc lai result
-var result = "A" && "B" && "C" && "NaN";
-console.log(result);
+var result = "A" || "B" || "C" || "D";
+// Or thấy khác 6 value => lấy luôn
 
+console.log("result", result);
 // if nhan gia trij la true
-// if (a < b) {
-//   console.log("A< B");
+// if (result) {
+//   console.log("Dieu kien dung");
 // } else {
-//   console.log("A>=B");
+//   console.log("Dieu kien sai");
 // }
