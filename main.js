@@ -10,8 +10,8 @@
 5. Template string ES6
 */
 // baclslash in JavaScript
-var fullName = "Day la dau \\";
+var fullName = "Linh Vu";
 
 // c2 dài dòng hơn,
 
-console.log(fullName);
+console.log(fullName.length);
