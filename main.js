@@ -1,17 +1,17 @@
-/* Chuoi trong JavaScript
+// Lam viec voi chuoi
 
-1. Tạo chuỗi
-- Các cách tạo chuỗi
-- Nên dùng cách nào? Lý do?
-- Kiểm tra data type
-2. Một số case sử dụng backslash (\)
-3. Xem độ dài chuỗi
-4. Chú ý độ dài khi viết code
-5. Template string ES6
-*/
+var myString = "Hoc Js tai F8!";
 
-var firstName = "Linh";
-var lastName = "Vu";
+// Keyword: JavaScript string methods
 
-console.log(`Toi la: ${firstName} ${lastName}`);
-console.log("Toi la: " + firstName + " " + lastName);
+// 1. Length
+// console.log(myString.length);
+// 2. Find index
+console.log(myString.indexOf("Js"));
+// 3. Cut String
+// 4. Replace
+// 5. Convert  to upper case
+// 6. Convert to lower case
+// 7. Trim
+// 8. Split
+// 9. Get a character by index
