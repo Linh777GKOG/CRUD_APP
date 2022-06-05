@@ -28,8 +28,12 @@ var myString = "    Hoc Js tai F8!";
 // console.log(myString.trim().length);
 
 // 8. Split
-var languages = "JavaScript, PhP, Ruby";
+// var languages = "JavaScript, PhP, Ruby";
 
-console.log(languages.split(""));
+// console.log(languages.split(""));
 
 // 9. Get a character by index
+const myString2 = "Linh Vu";
+
+console.log(myString2[10]);
+console.log(myString2.charAt(2));
