@@ -13,11 +13,17 @@ var myString = "Hoc Js tai F8!";
 // console.log(myString.search("Js"));
 
 // 3. Cut String
-console.log(myString.slice(4, 6));
+// console.log(myString.slice(-3, -1));
 
 // 4. Replace
+// console.log(myString.replace(/Js/g, "JavaScript"));
+
 // 5. Convert  to upper case
+// console.log(myString.toUpperCase());
+
 // 6. Convert to lower case
+console.log(myString.toLowerCase());
+
 // 7. Trim
 // 8. Split
 // 9. Get a character by index
