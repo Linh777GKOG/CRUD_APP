@@ -1,30 +1,11 @@
-/* 
-  cac loai function
+/* Chuoi trong JavaScript
 
-  1. Declaration function
-  2. Expression function
-  3. Arrow function
+1. Tạo chuỗi
+- Các cách tạo chuỗi
+- Nên dùng cách nào? Lý do?
+- Kiểm tra data type
+2. Một số case sử dụng backslash (\)
+3. Xem độ dài chuỗi
+4. Chú ý độ dài khi viết code
+5. Template string ES6
 */
-
-showMessage();
-function showMessage() {
-  console.log("Declaration function");
-}
-// declaration function
-
-var showMessage2 = function () {
-  console.log("Expression function");
-};
-showMessage2();
-// expresstion function
-// dat ten cho expresstion chỉ cho dễ hiểu
-
-setTimeout(function autoLogin() {
-  // expresstion functionj
-});
-
-var myObject = {
-  myFunction: function () {
-    // expresstion function
-  },
-};
