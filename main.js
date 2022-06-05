@@ -1,16 +1,30 @@
 /* 
-Một số điều cần biết về function
+  cac loai function
 
-1. Khi function đặt trùng tên: function sau ghi de function truoc
-2. Khai báo biến trong hàm?: Phạm vi trong function 
-3. Định nghĩa hàm trong hàm?: Có
+  1. Declaration function
+  2. Expression function
+  3. Arrow function
 */
 
-function showMessage() {
-  function showMessage2() {
-    console.log("Message 2");
-  }
-}
 showMessage();
-// defined là định nghĩa
+function showMessage() {
+  console.log("Declaration function");
+}
+// declaration function
+
+var showMessage2 = function () {
+  console.log("Expression function");
+};
 showMessage2();
+// expresstion function
+// dat ten cho expresstion chỉ cho dễ hiểu
+
+setTimeout(function autoLogin() {
+  // expresstion functionj
+});
+
+var myObject = {
+  myFunction: function () {
+    // expresstion function
+  },
+};
