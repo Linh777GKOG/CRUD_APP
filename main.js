@@ -10,7 +10,8 @@
 5. Template string ES6
 */
 // baclslash in JavaScript
-var fullName = "Linh Vu";
+var fullName =
+  "Mot so case su dung backslash" + " Mot so case su dung backslash";
 
 // c2 dài dòng hơn,
 
