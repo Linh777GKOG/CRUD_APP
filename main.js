@@ -9,4 +9,8 @@ Mảng trong JavaScript - Array
  - Độ dài mảng 
  - Lấy phần tử theo index
  */
-var languages = ["JavaScrip", "Php", "Ruby"];
+var languages = ["JavaScrip", "Php", "Ruby", "Dart"];
+// console.log(typeof languages);
+// console.log(Array.isArray());
+console.log(languages[0]);
+console.log(languages);
