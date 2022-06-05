@@ -1,6 +1,6 @@
 // Lam viec voi chuoi
 
-var myString = "Hoc Js tai F8!";
+var myString = "    Hoc Js tai F8!";
 
 // Keyword: JavaScript string methods
 
@@ -22,8 +22,10 @@ var myString = "Hoc Js tai F8!";
 // console.log(myString.toUpperCase());
 
 // 6. Convert to lower case
-console.log(myString.toLowerCase());
+// console.log(myString.toLowerCase());
 
 // 7. Trim
+console.log(myString.trim().length);
+
 // 8. Split
 // 9. Get a character by index
