@@ -9,10 +9,9 @@
 4. Chú ý độ dài khi viết code
 5. Template string ES6
 */
-// baclslash in JavaScript
-var fullName =
-  "Mot so case su dung backslash" + " Mot so case su dung backslash";
 
-// c2 dài dòng hơn,
+var firstName = "Linh";
+var lastName = "Vu";
 
-console.log(fullName.length);
+console.log(`Toi la: ${firstName} ${lastName}`);
+console.log("Toi la: " + firstName + " " + lastName);
