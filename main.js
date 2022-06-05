@@ -9,3 +9,8 @@
 4. Chú ý độ dài khi viết code
 5. Template string ES6
 */
+var fullName = "Linh Vu";
+
+// c2 dài dòng hơn,
+
+console.log(typeof fullName);
