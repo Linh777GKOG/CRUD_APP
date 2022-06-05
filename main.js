@@ -13,7 +13,7 @@
 
 3. Arguments
 - Doi tuong arguments
-- Gioi thieu vong for
+- Gioi thieu vong for of
 */
 
 // function writeLog(message, message2) {
@@ -24,7 +24,17 @@
 
 // Goi toi function, truyen gia tri vao => Đối số
 // console.log(1, 2, 3, 4, 5, 6);
+
 function writeLog() {
-  console.log(arguments);
+  var myString = "";
+  for (var param of arguments) {
+    myString += `${param} - `;
+    // Lấy element đầu tiên của array arguments gán vào param, rồi chạy code,
+    // chạy đến dấu } rồi vòng lại, có 3 phần tử chạy 3 lần
+  }
+  console.log(myString);
 }
-writeLog("Log1", "Log2");
+
+writeLog("Test1", "Test2", "log3");
+
+// console.log(1, 2, 3, 4);
