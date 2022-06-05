@@ -25,7 +25,11 @@ var myString = "    Hoc Js tai F8!";
 // console.log(myString.toLowerCase());
 
 // 7. Trim
-console.log(myString.trim().length);
+// console.log(myString.trim().length);
 
 // 8. Split
+var languages = "JavaScript, PhP, Ruby";
+
+console.log(languages.split(""));
+
 // 9. Get a character by index
