@@ -8,12 +8,15 @@ var myInfo = {
   address: "Ha Noi, VN",
   // đặt tên full-name: vi phạm => "full-name" ko lỗi nữa
   [emailKey]: "linhvu777gkog@gmail.com",
+  phone: "084502334853",
   getName: function () {
     return this.name;
   },
+  getAge: function () {},
 };
-delete myInfo.age;
-delete myInfo.address;
+
+// Function => Phương thức / method
+// Others => Thuộc tính / property
 
 console.log(myInfo.getName());
 
