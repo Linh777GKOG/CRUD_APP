@@ -1,16 +1,10 @@
-/* 
-Mảng trong JavaScript - Array
+// Object trong JavaScript
 
-1. Tạo mảng
-- Cách tạo
-- Sử dụng cách nào? Tại sao?
-- Kiểm tra data type?
-2. Truy xuất mảng
- - Độ dài mảng 
- - Lấy phần tử theo index
- */
-var languages = ["JavaScrip", "Php", "Ruby", "Dart"];
-// console.log(typeof languages);
-// console.log(Array.isArray());
-console.log(languages[0]);
-console.log(languages);
+var myInfo = {
+  name: "Linh Vu",
+  // 'name': thừa
+  age: 18,
+  address: "Ha Noi, VN",
+  // đặt tên full-name: vi phạm => "full-name" ko lỗi nữa
+};
+console.log(myInfo);
