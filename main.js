@@ -50,3 +50,10 @@
 // màu da, sở thích...
 
 // Object contructor
+function User(firstName, lastName, avatar) {
+  // Viết hoa chữ cái đầu của tên Object constructor
+  // Ko bắt buộc, nhưng nó là quy ước chung
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.avatar = avatar;
+}
