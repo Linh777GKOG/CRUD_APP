@@ -7,4 +7,7 @@ var myInfo = {
   address: "Ha Noi, VN",
   // đặt tên full-name: vi phạm => "full-name" ko lỗi nữa
 };
+// myInfo.email = "linhvu777gkog@gmail.com";
+myInfo["my-email"] = "linhvu777gkog@gmail.com";
+
 console.log(myInfo);
