@@ -60,3 +60,6 @@ function User(firstName, lastName, avatar) {
 
 var author = new User("Linh", "Vu", "Avatar");
 var user = new User("Linh", "Diep", "Avatar");
+
+console.log(author.constructor === User);
+console.log(user);
