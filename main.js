@@ -50,16 +50,22 @@
 // màu da, sở thích...
 
 // Object contructor
-function User(firstName, lastName, avatar) {
+var User = function User(firstName, lastName, avatar) {
   // Viết hoa chữ cái đầu của tên Object constructor
   // Ko bắt buộc, nhưng nó là quy ước chung
   this.firstName = firstName;
   this.lastName = lastName;
   this.avatar = avatar;
-}
+  this.getName = function () {
+    return `${this.firstName} ${this.lastName}`;
+  };
+};
 
 var author = new User("Linh", "Vu", "Avatar");
 var user = new User("Linh", "Diep", "Avatar");
 
-console.log(author.constructor === User);
-console.log(user);
+author.title = "Chia se dao tai F8";
+user.comment = "Hello";
+
+console.log(author.getName());
+console.log(user.getName());
