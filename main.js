@@ -57,3 +57,6 @@ function User(firstName, lastName, avatar) {
   this.lastName = lastName;
   this.avatar = avatar;
 }
+
+var author = new User("Linh", "Vu", "Avatar");
+var user = new User("Linh", "Diep", "Avatar");
