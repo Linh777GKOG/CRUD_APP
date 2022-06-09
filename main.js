@@ -49,23 +49,16 @@
 // VD: khi quan lý sinh viên ta chỉ cần quan tâm họ tên, tuổi tác, email..., chứ không cần biết chi tiết về chiều cao, cân nặng,
 // màu da, sở thích...
 
-// Object contructor
-var User = function User(firstName, lastName, avatar) {
+// Object contructor (Xây dựng đối tượng)
+
+function User(firstName, lastName, avatar) {
   // Viết hoa chữ cái đầu của tên Object constructor
-  // Ko bắt buộc, nhưng nó là quy ước chung
+  // Không bắt buộc, nhưng là quy ước chung
   this.firstName = firstName;
   this.lastName = lastName;
   this.avatar = avatar;
-  this.getName = function () {
-    return `${this.firstName} ${this.lastName}`;
-  };
-};
+}
 
 var author = new User("Linh", "Vu", "Avatar");
-var user = new User("Linh", "Diep", "Avatar");
-
-author.title = "Chia se dao tai F8";
-user.comment = "Hello";
-
-console.log(author.getName());
-console.log(user.getName());
+// String, Number, Array, Date,...
+// chính là những Object constructor
