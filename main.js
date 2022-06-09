@@ -49,27 +49,23 @@
 // VD: khi quan lý sinh viên ta chỉ cần quan tâm họ tên, tuổi tác, email..., chứ không cần biết chi tiết về chiều cao, cân nặng,
 // màu da, sở thích...
 
-// Object contructor (Xây dựng đối tượng)
+/* Object prototype - Basic
+ 
+1. Prototype là gì?
+2. Sử dụng khi nào?
+*/
 
-var User = function User(firstName, lastName, avatar) {
-  // Viết hoa chữ cái đầu của tên Object constructor
-  // Không bắt buộc, nhưng là quy ước chung
+function User(firstName, lastName, avatar) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.avatar = avatar;
-
   this.getName = function () {
     return `${this.firstName} ${this.lastName}`;
   };
-};
+}
 
-var author = new User("Linh", "Vu", "Avatar");
-var user = new User("Vu", "Nguyen", "Avatar");
-// String, Number, Array, Date,...
-// chính là những Object constructor
+var user = new User("Son", "Dang", "Avatar 1");
+var user2 = new User("Tan", "Dang", "Avatar 2");
 
-author.title = "Chia sẻ dạo tại F8";
-user.comment = "Liệu anh có ra ReactJS";
-
-console.log(author);
 console.log(user);
+console.log(user2);
