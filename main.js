@@ -51,17 +51,25 @@
 
 // Object contructor (Xây dựng đối tượng)
 
-function User(firstName, lastName, avatar) {
+var User = function User(firstName, lastName, avatar) {
   // Viết hoa chữ cái đầu của tên Object constructor
   // Không bắt buộc, nhưng là quy ước chung
   this.firstName = firstName;
   this.lastName = lastName;
   this.avatar = avatar;
-}
+
+  this.getName = function () {
+    return `${this.firstName} ${this.lastName}`;
+  };
+};
 
 var author = new User("Linh", "Vu", "Avatar");
 var user = new User("Vu", "Nguyen", "Avatar");
 // String, Number, Array, Date,...
 // chính là những Object constructor
-console.log(author.constructor === User);
+
+author.title = "Chia sẻ dạo tại F8";
+user.comment = "Liệu anh có ra ReactJS";
+
+console.log(author);
 console.log(user);
