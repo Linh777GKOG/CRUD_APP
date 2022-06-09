@@ -60,5 +60,8 @@ function User(firstName, lastName, avatar) {
 }
 
 var author = new User("Linh", "Vu", "Avatar");
+var user = new User("Vu", "Nguyen", "Avatar");
 // String, Number, Array, Date,...
 // chính là những Object constructor
+console.log(author.constructor === User);
+console.log(user);
