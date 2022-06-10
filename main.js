@@ -66,9 +66,12 @@ function User(firstName, lastName, avatar) {
 }
 
 User.prototype.className = "F8";
+User.prototype.getClassName = function () {
+  return this.className;
+};
 
 var user = new User("Son", "Dang", "Avatar 1");
 var user2 = new User("Tan", "Dang", "Avatar 2");
 
 console.log(user.className);
-console.log(user2.className);
+console.log(user2.getClassName());
