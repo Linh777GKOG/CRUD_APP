@@ -76,3 +76,14 @@
 // it hon 3 dung if else
 
 // Toán tử 3 ngôi - Ternary operator
+
+var course = {
+  name: "JavaScript",
+  coin: 0,
+};
+
+if (course.coin > 0) {
+  console.log(`${course.coin} coins`);
+} else {
+  console.log("Mien Phi");
+}
