@@ -67,4 +67,19 @@
 - Math.max()
 */
 
-console.log(Math.min(-100, 5, 5, 6, 6, 66, 6, -10));
+// Câu lệnh rẽ nhánh - If else
+
+var date = 2;
+
+if (date === 2) {
+  console.log("Hom nay la thu 2");
+}
+if (date === 3) {
+  console.log("Hom nay la thu 2");
+}
+if (date === 5) {
+  console.log("Hom nay la thu 2");
+}
+if (date === 6) {
+  console.log("Hom nay la thu 2");
+}
