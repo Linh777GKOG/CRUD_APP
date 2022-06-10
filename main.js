@@ -89,5 +89,13 @@ var course = {
 // }
 
 var result = course.coin > 0 ? `${course.coin} Coins` : "Mien phi";
+// ngan thoi
 
 console.log(result);
+
+var a = 1;
+var b = 2;
+
+var c = a > 0 ? a : b;
+console.log(c);
+// chi dung trong truong hop don gian
