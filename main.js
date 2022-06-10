@@ -67,4 +67,4 @@
 - Math.max()
 */
 
-console.log(Math.PI);
+console.log(Math.abs(-5));
