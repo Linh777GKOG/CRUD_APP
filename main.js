@@ -73,13 +73,8 @@ var date = 2;
 
 if (date === 2) {
   console.log("Hom nay la thu 2");
-}
-if (date === 3) {
+} else if (date === 2) {
   console.log("Hom nay la thu 2");
-}
-if (date === 5) {
-  console.log("Hom nay la thu 2");
-}
-if (date === 6) {
+} else if (date === 2) {
   console.log("Hom nay la thu 2");
 }
