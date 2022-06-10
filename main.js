@@ -67,4 +67,4 @@
 - Math.max()
 */
 
-console.log(Math.abs(-5));
+console.log(Math.ceil(4.1));
