@@ -65,10 +65,10 @@ function User(firstName, lastName, avatar) {
   };
 }
 
-User.className = "F8";
+User.prototype.className = "F8";
 
 var user = new User("Son", "Dang", "Avatar 1");
 var user2 = new User("Tan", "Dang", "Avatar 2");
 
 console.log(user.className);
-console.log(user2);
+console.log(user2.className);
