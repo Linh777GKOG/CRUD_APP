@@ -50,8 +50,9 @@
 // màu da, sở thích...
 
 /* Object prototype - Basic
+// Nguyên liệu để tạo nên ngôi nhà
  
-1. Prototype là gì?
+1. Prototype là gì: nguyên mẫu, khuôn => Nguyên mẫu để tạo nên 1 object(Đối tương)
 2. Sử dụng khi nào?
 */
 
@@ -64,8 +65,10 @@ function User(firstName, lastName, avatar) {
   };
 }
 
+User.className = "F8";
+
 var user = new User("Son", "Dang", "Avatar 1");
 var user2 = new User("Tan", "Dang", "Avatar 2");
 
-console.log(user);
+console.log(user.className);
 console.log(user2);
