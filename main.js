@@ -79,11 +79,15 @@
 
 var course = {
   name: "JavaScript",
-  coin: 0,
+  coin: 250,
 };
 
-if (course.coin > 0) {
-  console.log(`${course.coin} coins`);
-} else {
-  console.log("Mien Phi");
-}
+// if (course.coin > 0) {
+//   console.log(`${course.coin} coins`);
+// } else {
+//   console.log("Mien Phi");
+// }
+
+var result = course.coin > 0 ? `${course.coin} Coins` : "Mien phi";
+
+console.log(result);
