@@ -67,8 +67,4 @@
 - Math.max()
 */
 
-var random = Math.floor(Math.random() * 100);
-
-if (random < 5) {
-  console.log("Cuong hoa thanh cong");
-}
+console.log(Math.min(-100, 5, 5, 6, 6, 66, 6, -10));
