@@ -68,25 +68,26 @@
 */
 
 // Câu lệnh rẽ nhánh - If else
-var date = 2;
+var date = 20;
+
 
 switch (date) {
   case 2:
-    console.log("Hom nay la thu 2");
+
+  case 3:
+
+  case 4:
+    console.log("Hom nay la thu 2, 3, 4");
     break;
-  case 2:
-    console.log("Hom nay la thu 3");
-    break;
-  case 2:
-    console.log("Hom nay la thu 4");
-    break;
-  case 2:
+  case 5:
     console.log("Hom nay la thu 5");
     break;
-  case 2:
-    console.log("Hom nay la thu 6");
-    break;
-  case 2:
-    console.log("Hom nay la thu 2");
-    break;
+  default:
+    console.log("ko bt");
 }
+
+if (> , < , !== , ==) {
+  // dung if else
+}
+// cho truoc gia tri dug switch case
+// it hon 3 dung if else
