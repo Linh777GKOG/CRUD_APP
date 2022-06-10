@@ -56,10 +56,15 @@
 2. Sử dụng khi nào?
 */
 
-var date = new Date();
+/* Math object
+- Math.PI
+- Math.round()
+- Math.abs()
+- Math.ceil()
+- Math.floor()
+- Math.random()
+- Math.min()
+- Math.max()
+*/
 
-var year = date.getFullYear();
-var month = date.getMonth() + 1;
-var day = date.getDate();
-
-console.log(`${day}/${month}/${year}`);
+console.log(Math.PI);
