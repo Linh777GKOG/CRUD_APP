@@ -99,3 +99,13 @@ var b = 2;
 var c = a > 0 ? a : b;
 console.log(c);
 // chi dung trong truong hop don gian
+
+function getCanVoiMessage(age) {
+  var get;
+}
+getCanVoiMessage();
+function getCanVoteMessage(age) {
+  var getVoteMessage =
+    age > 18 ? "Bạn có thể bỏ phiếu" : "Bạn chưa được bỏ phiếu";
+  return getVoteMessage;
+}
