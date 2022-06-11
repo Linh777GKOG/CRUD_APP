@@ -154,10 +154,11 @@ var courses = [
     coin: 500,
   },
 ];
-var i = 0;
 
-var totalCoin = courses.reduce(function (total, course) {
-  i++;
-  console.log(i, total, course);
-  return total + course.coin;
+var numbers = [100, 200, 300, 500, 600];
+
+var totalCoin = numbers.reduce(function (total, number) {
+  return total + number;
 }, 0);
+
+console.log(totalCoin);
