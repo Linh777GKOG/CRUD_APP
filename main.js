@@ -95,10 +95,11 @@ Vòng lặp - Loop
 5. do/while - Lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
 */
 
-function getRandNumbers(min, max, length) {
-  var arr = [];
-  for (var i = 0; i < length; i++) {
-    arr[i] = Math.random() * (max - min) + min;
-  }
-  return arr;
+var myArray = ["JavaScript", "PHP", "Java", "Dart"];
+
+var arrayLength = myArray.length;
+// toi uu code hon
+
+for (var i = 0; i < arrayLength; i++) {
+  console.log(myArray[i]);
 }
