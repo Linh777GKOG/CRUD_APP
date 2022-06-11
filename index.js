@@ -126,15 +126,7 @@ Array methods:
     reduce()
 
 */
-Array.prototype.reduce2 = function (callback, initialValue) {
-  for (let i = 0; i < this.length; i++) {
-    callback(result, this[i], i, this);
-  }
-};
-const numbers = [1, 2, 3, 4, 5];
 
-const result = numbers.reduce2((total, number) => {
-  return total + number;
-}, 10);
+var courses = ["JavaScript", "PHP", "Dart"];
 
-console.log(result);
+console.log(courses.includes("JavaScritpt", -1));
