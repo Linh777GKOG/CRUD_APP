@@ -168,3 +168,8 @@ var totalCoin = numbers.reduce(function (total, number) {
 }, 0);
 
 console.log(totalCoin);
+
+var newCourses = topics.reduce(function (courses, topic) {
+  return courses.concat(topic.courses);
+}, []);
+console.log(newCourses);
