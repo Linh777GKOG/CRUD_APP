@@ -158,7 +158,6 @@ var i = 0;
 
 var totalCoin = courses.reduce(function (total, course) {
   i++;
-  console.log(i, total);
+  console.log(i, total, course);
   return total + course.coin;
 }, 0);
-console.log(totalCoin);
