@@ -105,6 +105,21 @@ Vòng lặp - Loop
 
 // Loop ...
 
-for (var i = 0; i <= 100; i += 5) {
-  console.log(i);
+// var array = ["a", "b", "c", "a", "b", "c"];
+
+// console.log([...new Set(array)]);
+
+// 1. Xac dinh diem dung
+// 2. Logic handle =>  Tạo ra điểm dừng
+
+// 3 * 2 * 1 =
+// 6 * 5*   ... *1 =
+
+function giaiThua(number) {
+  if (number > 0) {
+    return number * giaiThua(number - 1);
+  }
+  return 1;
 }
+
+console.log(giaiThua(3));
