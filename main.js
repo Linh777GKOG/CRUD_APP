@@ -99,13 +99,10 @@ Vòng lặp - Loop
 
 // For/of loop ko ap dung object
 
-// var languages = ["JavaScript", "PHP", "Java"];
-// var languages = 'JavaScript'
-var myInfo = {
-  name: "Linh Vu",
-  age: 18,
-};
-
-for (var value of Object.keys(myInfo)) {
-  console.log(value);
+// while loop
+var myArray = ["JavaScript", "PHP"];
+var i = 0;
+while (i < myArray.length) {
+  console.log(myArray[i]);
+  i++;
 }
