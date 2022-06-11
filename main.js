@@ -95,11 +95,12 @@ Vòng lặp - Loop
 5. do/while - Lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
 */
 
-var myArray = ["JavaScript", "PHP", "Java", "Dart"];
+// For/in loop
 
-var arrayLength = myArray.length;
-// toi uu code hon
+// var languages = ["JavaScript", "Php", "Ruby"];
+var languages = "JavaScript";
 
-for (var i = 0; i < arrayLength; i++) {
-  console.log(myArray[i]);
+for (var key in languages) {
+  //   console.log(languages[key]);
+  console.log(languages[key]);
 }
