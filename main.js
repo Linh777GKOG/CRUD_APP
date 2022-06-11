@@ -99,10 +99,16 @@ Vòng lặp - Loop
 
 // For/of loop ko ap dung object
 
-// while loop
-var myArray = ["JavaScript", "PHP"];
 var i = 0;
-while (i < myArray.length) {
-  console.log(myArray[i]);
+
+var isSuccess = false;
+
+do {
+  // code
   i++;
-}
+  console.log("Nap the lan  " + i);
+  // thanh cong
+  if (true) {
+    isSuccess = true;
+  }
+} while (!isSuccess && i < 3);
