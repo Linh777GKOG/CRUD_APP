@@ -94,3 +94,8 @@ Vòng lặp - Loop
 4. while - Lặp qua khi điều kiện đúng
 5. do/while - Lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
 */
+
+for (var i = 1; i <= 1000; i++) {
+  // code
+  console.log(i);
+}
