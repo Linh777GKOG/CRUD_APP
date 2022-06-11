@@ -97,10 +97,15 @@ Vòng lặp - Loop
 
 // For/in loop
 
-// var languages = ["JavaScript", "Php", "Ruby"];
-var languages = "JavaScript";
+// For/of loop ko ap dung object
 
-for (var key in languages) {
-  //   console.log(languages[key]);
-  console.log(languages[key]);
+// var languages = ["JavaScript", "PHP", "Java"];
+// var languages = 'JavaScript'
+var myInfo = {
+  name: "Linh Vu",
+  age: 18,
+};
+
+for (var value of Object.keys(myInfo)) {
+  console.log(value);
 }
