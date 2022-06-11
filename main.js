@@ -77,35 +77,20 @@
 
 // Toán tử 3 ngôi - Ternary operator
 
-var course = {
-  name: "JavaScript",
-  coin: 250,
-};
-
 // if (course.coin > 0) {
 //   console.log(`${course.coin} coins`);
 // } else {
 //   console.log("Mien Phi");
 // }
 
-var result = course.coin > 0 ? `${course.coin} Coins` : "Mien phi";
-// ngan thoi
-
-console.log(result);
-
-var a = 1;
-var b = 2;
-
-var c = a > 0 ? a : b;
-console.log(c);
 // chi dung trong truong hop don gian
 
-function getCanVoiMessage(age) {
-  var get;
-}
-getCanVoiMessage();
-function getCanVoteMessage(age) {
-  var getVoteMessage =
-    age > 18 ? "Bạn có thể bỏ phiếu" : "Bạn chưa được bỏ phiếu";
-  return getVoteMessage;
-}
+/*
+Vòng lặp - Loop
+
+1. for - Lặp với điều kiện đúng
+2. for/in - Lặp qua key của đối tượng
+3. for/of - Lặp qua value của đối tượng
+4. while - Lặp qua khi điều kiện đúng
+5. do/while - Lặp ít nhất 1 lần, sau đó lặp khi điều kiện đúng
+*/
