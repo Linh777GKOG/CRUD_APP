@@ -99,16 +99,10 @@ Vòng lặp - Loop
 
 // For/of loop ko ap dung object
 
-var i = 0;
-
-var isSuccess = false;
-
-do {
-  // code
-  i++;
-  console.log("Nap the lan  " + i);
-  // thanh cong
-  if (true) {
-    isSuccess = true;
+// Break & Continue in loop
+for (var i = 0; i < 10; i++) {
+  if (i % 2 !== 0) {
+    continue;
   }
-} while (!isSuccess && i < 3);
+  console.log(i);
+}
