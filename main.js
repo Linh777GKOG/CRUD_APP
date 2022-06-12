@@ -327,22 +327,28 @@ Array methods:
 // trong hàm(function ) map() khi ko có đối số => undefined(),
 // gọi cái hư vô nên hiểu là undefined,
 // cần truyền 1 function vào trong method map() => Ko Bug
-Array.prototype.reduce2 = function (callback, result) {
-  let i = 0;
-  if (arguments.length < 2) {
-    i = 1;
-    result = this[0];
-  }
-  for (; i < this.length; i++) {
-    result = callback(result, this[i], i, this);
-  }
-  return result;
-};
+// Array.prototype.reduce2 = function (callback, result) {
+//   let i = 0;
+//   if (arguments.length < 2) {
+//     i = 1;
+//     result = this[0];
+//   }
+//   for (; i < this.length; i++) {
+//     result = callback(result, this[i], i, this);
+//   }
+//   return result;
+// };
 
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 
-const result = numbers.reduce2((total, number, index, array) => {
-  console.log(total, number, index, array);
-  return total + number;
-}, 10);
-console.log(result);
+// const result = numbers.reduce2((total, number, index, array) => {
+//   console.log(total, number, index, array);
+//   return total + number;
+// }, 10);
+// console.log(result);
+
+// includes method
+
+var courses = ['Javascript', 'PHP', 'Dart'];
+
+console.log(courses.includes('Javascript'));
