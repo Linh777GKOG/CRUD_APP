@@ -185,7 +185,13 @@ var courses = [
   },
 ];
 
-// Flat - "Làm phẳng" mảng từ
+// Flat - "Làm phẳng" mảng từ Depth array -  "Mang sau"
+var depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
+
+var flatArray = depthArray.reduce(function (flatOutput, depthItem) {
+  return flatOutput.concat(depthItem);
+}, []);
+console.log(flatArray);
 
 // 1. Dễ hiểu: vòng lặp > array methods
 // 2. Ngắn gọn: vòng lặp < array methods
