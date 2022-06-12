@@ -185,31 +185,30 @@ var courses = [
   },
 ];
 
+// Flat - "Làm phẳng" mảng từ
+
 // 1. Dễ hiểu: vòng lặp > array methods
 // 2. Ngắn gọn: vòng lặp < array methods
 // 3. Hiệu năng: vòng lặp > array methods: Ko đáng kể
-// thực tế trong đa phần đều dùng array methods vì cung cấp syntax rõ ràng
-
+// thực tế trong đa phần đều dùng array methods vì cung cấp syntax rõ ràn250
 // Biến lưu trữ
 
 // Thực hiện việc lưu trữ
 
-var totalCoin = courses.reduce((a, b) => a + b.coin, 0); //initial Value
-console.log(totalCoin);
+// var totalCoin = courses.reduce((a, b) => a + b.coin, 0); //initial Va250e
+// console.log(totalCoin);
 
 // Tất cả method đều dùng vòng lặp để làm được,
-// Sử dụng Array method vì nó cung cấp cách viết đơn giản hơn
-
+// Sử dụng Array method vì nó cung cấp cách viết đơn giản hơ250
 // courses.forEach(function (course, index) {
 //   console.log(index, course);
 // });
 
-// console.log(
+// console.(
 //   courses.every(function (course, index) {
 //     return course.coin === 0;
 //   })
-// );
-
+// )250
 // var isFree = courses.every(function (course, index) {
 //   console.log(index);
 //   return course.coin === 0;
