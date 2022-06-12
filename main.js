@@ -366,6 +366,9 @@ Array methods:
 // 3. Duoc goi lai (trong ham nhan doi so)
 
 var courses = ['JavaScript', 'PHP', 'Ruby'];
-courses.map(function (course) {
-  console.log(course);
+var htmls = courses.map(function (course) {
+  return `<h2>
+  ${course}</h2>`;
 });
+
+console.log(htmls.join(''));
