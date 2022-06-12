@@ -349,13 +349,23 @@ Array methods:
 
 // includes method
 
-function myFunction(paran) {
-  if (typeof paran === 'function') {
-    paran('Hoc lap trinh');
-  }
-}
+// function myFunction(paran) {
+//   if (typeof paran === 'function') {
+//     paran('Hoc lap trinh');
+//   }
+// }
 
-function myCallback(value) {
-  console.log('Value: ', value);
-}
-myFunction(myCallback);
+// function myCallback(value) {
+//   console.log('Value: ', value);
+// }
+// myFunction(myCallback);
+
+// Callback - phan 2
+// 1. La ham
+// 2. Truyen qua doi so
+// 3. Duoc goi lai (trong ham nhan doi so)
+
+var courses = ['JavaScript', 'PHP', 'Ruby'];
+courses.map(function (course) {
+  console.log(course);
+});
