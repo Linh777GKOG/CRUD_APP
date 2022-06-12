@@ -239,7 +239,21 @@ var htmls = newCourses.map(function (course) {
   `;
 });
 
-console.log(htmls);
+console.log(htmls.join(""));
+
+function calculateRating(watchList) {
+  const newArray = watchList.filter(
+    (array) => array["Director"] === "Christopher  Nolan"
+  );
+  const scoreIMDB = newArray.reduce((total, item, index) => {
+    total += Number(item.imdbRating);
+    if (index === newArray.length - 1) {
+      return total / newArray.length;
+    }
+    return total;
+  }, 0);
+  return scoreIMDB;
+}
 
 // 1. Dễ hiểu: vòng lặp > array methods
 // 2. Ngắn gọn: vòng lặp < array methods
