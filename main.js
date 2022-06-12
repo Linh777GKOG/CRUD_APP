@@ -119,10 +119,21 @@ Vòng lặp - Loop
 Array methods: 
     forEach(): duyệt qua từng phần tử của mảng
     every(): Kiểm tra tất cả các phần tử của một mảng phải thỏa mãn 1 điều kiện gì đó
+    // hoat dong gan giống vóng lặp, lặp qua từng phần tử của mảng,
+    // mỗi lần lặp lại sẽ gọi ngược lại cái hàm đã truyền vào, 
+    // có tham số đầu tiên là phần tử của mảng,
     some(): Kiểm tra 1 ông thôi thỏa mãn là được
+    // ngược lại với every,
+    // Duyệt qua từng phần tử, chỉ một ông đúng là dừng
     find()
-    filter()
-    map()
+    // Tìm kiếm, Lặp qua từng phần tử của mảng, được gọi lại,
+    // trả về từng phần tử, kiểm tra phần tử nào return true,
+    // lấy phần tử đó, gán ngược vào, return phần tử đó, vòng kt kết thúc, 
+    // ko có sẽ trả về undefined, chi tra ve 1 phần tử 
+    filter(): trả về tất cả phần tử thỏa mãn, tìm kiếm qua 1 ds
+    map(): sử dụng khi muốn chỉnh sửa, thay đổi element của 1 array,
+// duyệt qua từng phần tử của mảng, duyệt qua tới phần tử nào thì nó 
+// sẽ call lại function mà chúng ta đã truyền qua đối số của method map()
     reduce()
 
 */
@@ -165,8 +176,66 @@ var courses = [
     name: "ReactJS",
     coin: 0,
   },
+  {
+    id: 6,
+    name: "Ruby",
+    coin: 250,
+  },
 ];
 
-courses.forEach(function (course, index) {
-  console.log(index, course);
-});
+// courses.forEach(function (course, index) {
+//   console.log(index, course);
+// });
+
+// console.log(
+//   courses.every(function (course, index) {
+//     return course.coin === 0;
+//   })
+// );
+
+// var isFree = courses.every(function (course, index) {
+//   console.log(index);
+//   return course.coin === 0;
+// });
+
+// console.log(isFree);
+
+// var isFree = courses.some(function (course, index) {
+//   return course.coin === 0;
+// });
+// console.log(isFree);
+
+// var course = courses.find(function (course, index) {
+//   return course.name === "Ruby";
+// });
+
+// console.log(course);
+
+// var listCourse = courses.filter(function (course, index) {
+//   return course.name === "Ruby";
+// });
+
+// console.log(listCourse);
+
+// var courseHandler = function() {
+
+// };
+function courseHandler(course) {
+  console.log(course);
+}
+// có thể truyền vào expresstion function hoặc declarations function
+
+var newCourses = courses.map(courseHandler);
+
+// function có thể viết trực tiếp bên trong, hoặc viết bên ngoài
+// method map() la 1 function, và là phương thức của một đối tượng, courses array cx là Object nên ta sử dụng '.' để gọi phương thức map()
+// method map() sẽ return mảng mới bến newCourses, sẽ có số lượng phần tử bẳng đúng số lượng phần tử có giá trị của mảng cũ
+// khi sử dụng method map() sẽ có đối số truyền vào,
+// đối số phải là một function, ko truyền sẽ bị lỗi undefined,
+// bên trong method map() thực hiện một vòng lặp, lặp qua từng phần tử,
+// mỗi khi lặp qua 1 phần tử, nó sẽ call lại 1 function để nó thực thi,
+// tạo ra sự thay đổi, function phải được truyền qua map(), ko truyền,
+// nó sẽ hiểu là undefined => undefined is not a function,
+// trong hàm(function ) map() khi ko có đối số => undefined(),
+// gọi cái hư vô nên hiểu là undefined,
+// cần truyền 1 function vào trong method map() => Ko Bug
