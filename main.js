@@ -207,7 +207,8 @@ var topics = [
         title: "JavaScript",
       },
     ],
-  },  {
+  },
+  {
     topic: "Back-end",
     courses: [
       {
@@ -219,8 +220,26 @@ var topics = [
         title: "NodeJS",
       },
     ],
- 
+  },
 ];
+
+var newCourses = topics.reduce(function (course, topic) {
+  return courses.concat(topic.courses);
+}, []);
+// console.log(newCourses);
+
+var htmls = newCourses.map(function (course) {
+  return `
+ <div>
+ 
+ <h2>${course.title}</h2>
+ <p>ID: ${course.id}</p>
+ 
+ </div> 
+  `;
+});
+
+console.log(htmls);
 
 // 1. Dễ hiểu: vòng lặp > array methods
 // 2. Ngắn gọn: vòng lặp < array methods
