@@ -135,7 +135,8 @@ Array methods:
 // duyệt qua từng phần tử của mảng, duyệt qua tới phần tử nào thì nó 
 // sẽ call lại function mà chúng ta đã truyền qua đối số của method map()
 // Trong thực tế render view trên layout
-    reduce()
+    reduce(): khi muốn nhận về 1 giá trị duy nhất sau khi tính toán xử lỉ phần
+// tử trong array
 
 */
 
