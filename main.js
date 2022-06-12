@@ -351,4 +351,4 @@ Array methods:
 
 var courses = ['Javascript', 'PHP', 'Dart'];
 
-console.log(courses.includes('Javascript'));
+console.log(courses.includes('Javascript', -3));
