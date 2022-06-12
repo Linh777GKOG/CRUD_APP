@@ -134,6 +134,7 @@ Array methods:
     map(): sử dụng khi muốn chỉnh sửa, thay đổi element của 1 array,
 // duyệt qua từng phần tử của mảng, duyệt qua tới phần tử nào thì nó 
 // sẽ call lại function mà chúng ta đã truyền qua đối số của method map()
+// Trong thực tế render view trên layout
     reduce()
 
 */
@@ -220,13 +221,17 @@ var courses = [
 // var courseHandler = function() {
 
 // };
-function courseHandler(course) {
-  console.log(course);
+function courseHandler(course, index) {
+  //function truyền vào method map() trả về cái gì, thì nó
+  // lấy cái đó làm element, lần 1 duyệt qua element 1, trả về course
+  // function 1 return cái gì thì newCourses sẽ nhận được cái đ  return course.name;
+  return `<h2>${course.name}</h2>`;
 }
 // có thể truyền vào expresstion function hoặc declarations function
 
 var newCourses = courses.map(courseHandler);
-
+// trả về 1 array bên newCourses
+console.log(newCourses.join(""));
 // function có thể viết trực tiếp bên trong, hoặc viết bên ngoài
 // method map() la 1 function, và là phương thức của một đối tượng, courses array cx là Object nên ta sử dụng '.' để gọi phương thức map()
 // method map() sẽ return mảng mới bến newCourses, sẽ có số lượng phần tử bẳng đúng số lượng phần tử có giá trị của mảng cũ
