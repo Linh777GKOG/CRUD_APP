@@ -134,12 +134,39 @@ Array methods:
 
 // 1. Là hàm
 // 2. Được truyền qua đối số
-function myFunction(param) {
-  param("Hoc lap trinh");
-}
 
-function myCallback(value) {
-  console.log("Value: ", value);
-}
+// 1. Dễ hiểu
+// 2. Ngắn gọn
+// 3. Hiệu năng
 
-myFunction(myCallback);
+var courses = [
+  {
+    id: 1,
+    name: "JavaScript",
+    coin: 250,
+  },
+  {
+    id: 2,
+    name: "HTML, CSS",
+    coin: 250,
+  },
+  {
+    id: 3,
+    name: "Ruby",
+    coin: 250,
+  },
+  {
+    id: 4,
+    name: "PHP",
+    coin: 250,
+  },
+  {
+    id: 5,
+    name: "ReactJS",
+    coin: 0,
+  },
+];
+
+courses.forEach(function (course, index) {
+  console.log(index, course);
+});
