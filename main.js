@@ -152,38 +152,38 @@ Array methods:
 // 2. Ngắn gọn
 // 3. Hiệu năng
 
-var courses = [
-  {
-    id: 1,
-    name: "JavaScript",
-    coin: 250,
-  },
-  {
-    id: 2,
-    name: "HTML, CSS",
-    coin: 250,
-  },
-  {
-    id: 3,
-    name: "Ruby",
-    coin: 250,
-  },
-  {
-    id: 4,
-    name: "PHP",
-    coin: 250,
-  },
-  {
-    id: 5,
-    name: "ReactJS",
-    coin: 0,
-  },
-  {
-    id: 6,
-    name: "Ruby",
-    coin: 250,
-  },
-];
+// var courses = [
+//   {
+//     id: 1,
+//     name: "JavaScript",
+//     coin: 250,
+//   },
+//   {
+//     id: 2,
+//     name: "HTML, CSS",
+//     coin: 250,
+//   },
+//   {
+//     id: 3,
+//     name: "Ruby",
+//     coin: 250,
+//   },
+//   {
+//     id: 4,
+//     name: "PHP",
+//     coin: 250,
+//   },
+//   {
+//     id: 5,
+//     name: "ReactJS",
+//     coin: 0,
+//   },
+//   {
+//     id: 6,
+//     name: "Ruby",
+//     coin: 250,
+//   },
+// ];
 
 // Flat - "Làm phẳng" mảng từ Depth array -  "Mang sau"
 // var depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
@@ -194,66 +194,66 @@ var courses = [
 // console.log(flatArray);
 
 // Lay ra cac khoa hoc dua vao 1 mang moi
-var topics = [
-  {
-    topic: "Front-end",
-    courses: [
-      {
-        id: 1,
-        title: "HTML, CSS",
-      },
-      {
-        id: 2,
-        title: "JavaScript",
-      },
-    ],
-  },
-  {
-    topic: "Back-end",
-    courses: [
-      {
-        id: 1,
-        title: "PHP",
-      },
-      {
-        id: 2,
-        title: "NodeJS",
-      },
-    ],
-  },
-];
+// var topics = [
+//   {
+//     topic: "Front-end",
+//     courses: [
+//       {
+//         id: 1,
+//         title: "HTML, CSS",
+//       },
+//       {
+//         id: 2,
+//         title: "JavaScript",
+//       },
+//     ],
+//   },
+//   {
+//     topic: "Back-end",
+//     courses: [
+//       {
+//         id: 1,
+//         title: "PHP",
+//       },
+//       {
+//         id: 2,
+//         title: "NodeJS",
+//       },
+//     ],
+//   },
+// ];
 
-var newCourses = topics.reduce(function (course, topic) {
-  return courses.concat(topic.courses);
-}, []);
-// console.log(newCourses);
+// var newCourses = topics.reduce(function (course, topic) {
+//   return courses.concat(topic.courses);
+// }, []);
+// // console.log(newCourses);
 
-var htmls = newCourses.map(function (course) {
-  return `
- <div>
- 
- <h2>${course.title}</h2>
- <p>ID: ${course.id}</p>
- 
- </div> 
-  `;
-});
+// var htmls = newCourses.map(function (course) {
+//   return `
+//  <div>
 
-console.log(htmls.join(""));
+//  <h2>${course.title}</h2>
+//  <p>ID: ${course.id}</p>
 
-function calculateRating(watchList) {
-  const newArray = watchList.filter(
-    (array) => array["Director"] === "Christopher  Nolan"
-  );
-  const scoreIMDB = newArray.reduce((total, item, index) => {
-    total += Number(item.imdbRating);
-    if (index === newArray.length - 1) {
-      return total / newArray.length;
-    }
-    return total;
-  }, 0);
-  return scoreIMDB;
-}
+//  </div>
+//   `;
+// });
+
+// console.log(htmls.join(""));
+
+// function calculateRating(watchList) {
+//   const newArray = watchList.filter(
+//     (array) => array["Director"] === "Christopher  Nolan"
+//   );
+//   const scoreIMDB = newArray.reduce((total, item, index) => {
+//     total += Number(item.imdbRating);
+//     if (index === newArray.length - 1) {
+//       return total / newArray.length;
+//     }
+//     return total;
+//   }, 0);
+//   return scoreIMDB;
+// }
 
 // 1. Dễ hiểu: vòng lặp > array methods
 // 2. Ngắn gọn: vòng lặp < array methods
@@ -327,3 +327,10 @@ function calculateRating(watchList) {
 // trong hàm(function ) map() khi ko có đối số => undefined(),
 // gọi cái hư vô nên hiểu là undefined,
 // cần truyền 1 function vào trong method map() => Ko Bug
+
+const numbers = [1, 2, 3, 4, 5];
+
+const result = numbers.reduce((total, number) => {
+  return total + number;
+}, 10);
+console.log(result);
