@@ -349,6 +349,13 @@ Array methods:
 
 // includes method
 
-var courses = ['Javascript', 'PHP', 'Dart'];
+function myFunction(paran) {
+  if (typeof paran === 'function') {
+    paran('Hoc lap trinh');
+  }
+}
 
-console.log(courses.includes('Javascript', -3));
+function myCallback(value) {
+  console.log('Value: ', value);
+}
+myFunction(myCallback);
