@@ -391,17 +391,11 @@ Array methods:
 // 1. Object prototype
 // 2. For in
 // 3. hasOwnProperty
-Array.prototype.myEvery = function (callback) {
-  let output = true;
-
-  for (let index in this) {
-    if (this.hasOwnProtery(index)) {
-      let result = callback(this[index], index, this);
-      if (!result) {
-        output = false;
-        break;
-      }
-    }
+Array.prototype.myEvery = function (cb) {
+  let arr = [];
+  for (let i = 0; i < this.length; i++) {
+    let output = cb(this[i], i, this);
+    arr.push(output);
   }
-  return output;
+  return arr.length === this.length ? true : false;
 };
