@@ -391,4 +391,6 @@ Array methods:
 
 var courses = ['JavaScript', 'PHP'];
 
+courses.length = 10;
+
 console.log(courses);
