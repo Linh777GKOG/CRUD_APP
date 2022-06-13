@@ -402,3 +402,27 @@ Array.prototype.mySome = function (callback) {
   }
   return false;
 };
+
+var courses = [
+  {
+    name: 'JavaScript',
+    coin: 680,
+    isFinish: true,
+  },
+  {
+    name: 'PHP',
+    coin: 860,
+    isFinish: true,
+  },
+  {
+    name: 'Ruby',
+    coin: 980,
+    isFinish: false,
+  },
+];
+
+var result = courses.every(function (course, index) {
+  return course.isFinish === true;
+});
+
+console.log(result);
