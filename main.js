@@ -391,7 +391,8 @@ Array methods:
 // 1. Object prototype
 // 2. For in
 // 3. hasOwnProperty
-Array.prototype.mySome = function (callback) {
+Array.prototype.every2 = function (callback) {
+  var output = true;
   for (let index in this) {
     if (this.hasOwnProperty(index)) {
       if (callback(this[index], index, this)) {
@@ -421,8 +422,8 @@ var courses = [
   },
 ];
 
-var result = courses.every(function (course, index) {
-  return course.isFinish === true;
+var result = courses.every2(function (course, index) {
+  return course.isFinish;
 });
 
 console.log(result);
