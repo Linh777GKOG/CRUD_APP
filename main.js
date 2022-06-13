@@ -391,24 +391,14 @@ Array methods:
 // 1. Object prototype
 // 2. For in
 // 3. hasOwnProperty
-
-var courses = [
-  {
-    name: 'JavaScript',
-    coin: 680,
-    isFinish: true,
-  },
-  {
-    name: 'PHP',
-    coin: 860,
-    isFinish: false,
-  },
-  { name: 'Ruby', coin: 980, isFinish: false },
-];
-
-
-var result =  courses.some(function(course,index ,this) {
-  return courses.isFinish
-})
-
-console.log(result)
+Array.prototype.mySome = function (callback) {
+  for (let index in this) {
+    if (this.hasOwnProperty(index)) {
+      if (callback(this[index], index, this)) {
+        return true;
+        break;
+      }
+    }
+  }
+  return false;
+};
