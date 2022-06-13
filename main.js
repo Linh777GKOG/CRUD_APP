@@ -391,39 +391,17 @@ Array methods:
 // 1. Object prototype
 // 2. For in
 // 3. hasOwnProperty
-Array.prototype.every2 = function (callback) {
-  var output = true;
+Array.prototype.myEvery = function (callback) {
+  let output = true;
+
   for (let index in this) {
-    if (this.hasOwnProperty(index)) {
-      if (callback(this[index], index, this)) {
-        return true;
+    if (this.hasOwnProtery(index)) {
+      let result = callback(this[index], index, this);
+      if (!result) {
+        output = false;
         break;
       }
     }
   }
-  return false;
+  return output;
 };
-
-var courses = [
-  {
-    name: 'JavaScript',
-    coin: 680,
-    isFinish: true,
-  },
-  {
-    name: 'PHP',
-    coin: 860,
-    isFinish: true,
-  },
-  {
-    name: 'Ruby',
-    coin: 980,
-    isFinish: false,
-  },
-];
-
-var result = courses.every2(function (course, index) {
-  return course.isFinish;
-});
-
-console.log(result);
