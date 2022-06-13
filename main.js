@@ -389,10 +389,6 @@ Array methods:
 
 // console.log(htmls.join(''));
 
-var courses = new Array(10, 12);
+var courses = ['JavaScript', 'PHP', 'Ruby'];
 
-console.log(courses);
-
-for (var index in courses) {
-  console.log(courses[index]);
-}
+courses.forEach(function () {});
