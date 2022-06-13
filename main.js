@@ -389,13 +389,6 @@ Array methods:
 
 // console.log(htmls.join(''));
 
-Array.prototype.myMap = function (callback) {
-  let arrLength = this.length;
-  let output = [];
+var courses = ['JavaScript', 'PHP'];
 
-  for (let i = 0; i < arrLength; i++) {
-    let result = callback(this[i], i);
-    output.push(result);
-  }
-  return output;
-};
+console.log(courses);
