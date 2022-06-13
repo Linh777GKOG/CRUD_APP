@@ -388,13 +388,21 @@ Array methods:
 // });
 
 // console.log(htmls.join(''));
+// 1. Object prototype
+// 2. For in
+// 3. hasOwnProperty
+
 Array.prototype.forEach2 = function (callback) {
   for (var index in this) {
-    console.log('index: ', index);
+    if (this.hasOwnPropery(index)) {
+      callback(this[index], index, this);
+    }
   }
 };
 
 var courses = ['JavaScript', 'PHP', 'Ruby'];
+
+console.log(courses);
 
 courses.forEach2(function (course, index, array) {
   console.log(course, index, array);
