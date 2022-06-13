@@ -392,18 +392,23 @@ Array methods:
 // 2. For in
 // 3. hasOwnProperty
 
-Array.prototype.forEach2 = function (callback) {
-  for (var index in this) {
-    if (this.hasOwnPropery(index)) {
-      callback(this[index], index, this);
-    }
-  }
-};
+var courses = [
+  {
+    name: 'JavaScript',
+    coin: 680,
+    isFinish: true,
+  },
+  {
+    name: 'PHP',
+    coin: 860,
+    isFinish: false,
+  },
+  { name: 'Ruby', coin: 980, isFinish: false },
+];
 
-var courses = ['JavaScript', 'PHP', 'Ruby'];
 
-console.log(courses);
+var result =  courses.some(function(course,index ,this) {
+  return courses.isFinish
+})
 
-courses.forEach2(function (course, index, array) {
-  console.log(course, index, array);
-});
+console.log(result)
