@@ -391,3 +391,11 @@ Array methods:
 // 1. Object prototype
 // 2. For in
 // 3. hasOwnProperty
+
+var a = 1;
+var b = 2;
+
+let i = 0;
+while (i < n) {
+  i = i + 5;
+}
