@@ -413,3 +413,27 @@ for (i = 0; i < n; i++) {
 //      = (n*2 + n)/2
 //      = n*2/2 + n/2
 // => O(f(n)) = O(n*2)
+
+for (i = 0; i < arr.length; i++) {
+  if (arr[i] === value) {
+    return;
+  }
+  return 1;
+}
+
+// f(n) = cn O(f(n)) = O(n)
+
+var lengthOfLongestSubstring = function (s) {
+  let max = 0;
+  let begin = 0;
+  let map = {};
+
+  for (let end = 0; end < s.length; end++) {
+    if (map[s[end]] !== undefined && map[s[end]] >= begin) {
+      begin = map[s[end]] + 1;
+    }
+    map[s[end]] = end;
+    max = Math.max(max, end - begin + 1);
+  }
+  return max;
+};
