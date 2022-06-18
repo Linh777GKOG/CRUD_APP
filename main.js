@@ -401,3 +401,10 @@ Array methods:
 // 6. HTML collection: img, form, a
 
 // 7. document.write
+// DOM attribute
+
+var headingElement = document.querySelector('h1');
+
+headingElement.title = 'Title test';
+
+alert(headingElement.title);
