@@ -403,8 +403,6 @@ Array methods:
 // 7. document.write
 // DOM attribute
 
-var headingElement = document.querySelector('h1');
+var headingElement = document.querySelector('.heading');
 
-headingElement.title = 'Title test';
-
-alert(headingElement.title);
+console.log(headingElement.textContent);
