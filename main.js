@@ -403,6 +403,14 @@ Array methods:
 // 7. document.write
 // DOM attribute
 
-var headingElement = document.querySelector('.heading');
+// innerHTML, outerHTML
+var courses = ['HTML & CSS', 'Javascript', 'PHP', 'Java'];
 
-headingElement.innerText = '<i>NEw Heain</i>';
+function render(courses) {
+  let ul = document.querySelector('ul');
+
+  let newCourses = courses.map((course, index) => {
+    return `<li>${course}</li>`;
+  });
+  ul.innerHTML = newCourses.join('');
+}
