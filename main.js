@@ -404,13 +404,16 @@ Array methods:
 // DOM attribute
 
 // innerHTML, outerHTML
-var courses = ['HTML & CSS', 'Javascript', 'PHP', 'Java'];
+var boxElement = document.querySelector('.box');
 
-function render(courses) {
-  let ul = document.querySelector('ul');
+boxElement.style.width = '100px';
+boxElement.style.height = '200px';
+boxElement.style.backgroundColor = 'yellow';
 
-  let newCourses = courses.map((course, index) => {
-    return `<li>${course}</li>`;
-  });
-  ul.innerHTML = newCourses.join('');
-}
+Object.assign(boxElement.style, {
+  width: '200px',
+  height: '100px',
+  backgroundColor: 'green',
+});
+
+console.log(boxElement.style.backgroundColor);
