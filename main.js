@@ -405,4 +405,4 @@ Array methods:
 
 var headingElement = document.querySelector('.heading');
 
-console.log(headingElement.textContent);
+headingElement.innerText = '<i>NEw Heain</i>';
