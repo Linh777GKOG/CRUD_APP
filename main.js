@@ -415,10 +415,21 @@ Array methods:
 // 1. Attribute events
 // 2. Assign event using the element node
 
-var h1Elements = document.querySelectorAll('h1');
+// DOM events
+// 1. Input / select
+// 2. Key up / down
 
-for (var i = 0; i < h1Elements.length; i++) {
-  h1Elements[i].onclick = function (e) {
-    console.log(e.target);
-  };
-}
+// 1. preventDefault: loại bỏ hành vi mặc định của trình duyệt trên
+// một thẻ html
+// 2. stopPropagation: loại bỏ sự kiện nổi bọt
+
+// link lấy tất cả thẻ a ra
+
+document.querySelector('div').onclick = function () {
+  console.log('DIV');
+};
+
+document.querySelector('button').onclick = function (e) {
+  e.stopPropagation();
+  console.log('Click me! ');
+};
