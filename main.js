@@ -410,10 +410,15 @@ Array methods:
 // contains
 // remove
 // toggle
-var boxElement = document.querySelector('.box');
 
-boxElement.classList.add('red');
+// DOM events
+// 1. Attribute events
+// 2. Assign event using the element node
 
-setInterval(() => {
-  boxElement.classList.toggle('red');
-}, 3000);
+var h1Elements = document.querySelectorAll('h1');
+
+for (var i = 0; i < h1Elements.length; i++) {
+  h1Elements[i].onclick = function (e) {
+    console.log(e.target);
+  };
+}
