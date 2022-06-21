@@ -424,7 +424,14 @@ Array methods:
 // 2. stopPropagation: loại bỏ sự kiện nổi bọt
 
 // 1. DOM event / Event Listener
-// 2. JSON
+//            (1. Xử lí nhiều việc khi 1 event xảy ra
+//             2. Lắng nghe / Hủy bỏ lắng nghe)
+// 2. JSON: 1. là 1 định dạng dữ liệu (chuỗi)
+//          2. JavaScript Object Notation
+//          3. JSON: number, Boolean, Null, Array, Obejct
+//     Mã hóa => Encode / Giải mã => decode
+//     Stringify: Từ JS types => JSON
+//     Parse: Từ JSON => JavaScỉpt types
 // 3. Fetch
 // 4. DOM location
 // 5. storage
@@ -434,20 +441,12 @@ Array methods:
 // 9. Mistakes
 // 10. Performance
 
-// 1. Xử lí nhiều việc khi 1 event xảy ra
-// 2. Lắng nghe / Hủy bỏ lắng nghe
+// var json = '["JavaScript", "PHP"]';
 
-var btn = document.getElementById('btn');
-function viec1() {
-  console.log('Viec 1');
-}
-function viec2() {
-  console.log('Viec 2');
-}
-
-btn.addEventListener('click', viec1);
-btn.addEventListener('click', viec2);
-
-setTimeout(function () {
-  btn.removeEventListener('click', viec1);
-}, 3000);
+console.log(
+  JSON.stringify({
+    name: 'Linh Vu',
+    age: 16,
+    test: function () {},
+  })
+);
