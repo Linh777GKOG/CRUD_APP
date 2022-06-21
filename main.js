@@ -436,7 +436,11 @@ Array methods:
 /*    - Sync: Đồng bô => OK 
       - Async: Bất đồng bộ => OK
       - Nỗi đau: => OK
-      - Lý thuyết, cách hoạt động: 
+      - Lý thuyết, cách hoạt động: Sinh ra để xử lí bất đồng bộ,
+      trước khi có promise ta thường sử dụng callback => Thường sẽ
+      sinh ra callback hell, promise được sinh ra trong phiên bản es6,
+      có thể giúp khác phục tình trạng callback hell giúp code dễ đọc, dễ 
+    hiểu
       - Thực hành, ví dụ
  */
 // 4. Fetch
@@ -452,15 +456,34 @@ Array methods:
 // setTimeout, setInterval, fetch, XMLHttpRequest, file reading,
 // request animation frame
 
-setTimeout(function () {
-  console.log(1);
-  setTimeout(function () {
-    console.log(2);
-    setTimeout(function () {
-      console.log(3);
-      setTimeout(function () {
-        console.log(4);
-      }, 1000);
-    }, 1000);
-  }, 1000);
-}, 1000);
+// 1. new Promise
+// 2. Executor
+
+// 1. Pendding
+// 2. Fulfilled
+// 3. Rejected
+
+// Memory leak
+
+var promise = new Promise(
+  // Excutor
+  function (resolve, reject) {
+    // Logic
+    // Thành công: resolve()
+    // Thất bại: reject()
+
+    // Fake call API
+    reject('Co loi!');
+  }
+);
+
+promise
+  .then(function (courses) {
+    console.log(courses);
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .finally(function () {
+    console.log('Done!');
+  });
