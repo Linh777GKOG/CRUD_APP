@@ -423,13 +423,31 @@ Array methods:
 // một thẻ html
 // 2. stopPropagation: loại bỏ sự kiện nổi bọt
 
-// link lấy tất cả thẻ a ra
+// 1. DOM event / Event Listener
+// 2. JSON
+// 3. Fetch
+// 4. DOM location
+// 5. storage
+// 6. Session storage
+// 7. Coding convention
+// 8. Best Practices
+// 9. Mistakes
+// 10. Performance
 
-document.querySelector('div').onclick = function () {
-  console.log('DIV');
-};
+// 1. Xử lí nhiều việc khi 1 event xảy ra
+// 2. Lắng nghe / Hủy bỏ lắng nghe
 
-document.querySelector('button').onclick = function (e) {
-  e.stopPropagation();
-  console.log('Click me! ');
-};
+var btn = document.getElementById('btn');
+function viec1() {
+  console.log('Viec 1');
+}
+function viec2() {
+  console.log('Viec 2');
+}
+
+btn.addEventListener('click', viec1);
+btn.addEventListener('click', viec2);
+
+setTimeout(function () {
+  btn.removeEventListener('click', viec1);
+}, 3000);
