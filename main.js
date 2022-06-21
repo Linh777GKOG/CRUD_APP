@@ -432,21 +432,35 @@ Array methods:
 //     Mã hóa => Encode / Giải mã => decode
 //     Stringify: Từ JS types => JSON
 //     Parse: Từ JSON => JavaScỉpt types
-// 3. Fetch
-// 4. DOM location
-// 5. storage
-// 6. Session storage
-// 7. Coding convention
-// 8. Best Practices
-// 9. Mistakes
-// 10. Performance
+// 3. Promise:
+/*    - Sync: Đồng bô => OK 
+      - Async: Bất đồng bộ => OK
+      - Nỗi đau: => OK
+      - Lý thuyết, cách hoạt động: 
+      - Thực hành, ví dụ
+ */
+// 4. Fetch
+// 5. DOM location
+// 6. storage
+// 7. Session storage
+// 8. Coding convention
+// 9. Best Practices
+// 10. Mistakes
+// 11. Performance
 
-// var json = '["JavaScript", "PHP"]';
+// Sync / Async
+// setTimeout, setInterval, fetch, XMLHttpRequest, file reading,
+// request animation frame
 
-console.log(
-  JSON.stringify({
-    name: 'Linh Vu',
-    age: 16,
-    test: function () {},
-  })
-);
+setTimeout(function () {
+  console.log(1);
+  setTimeout(function () {
+    console.log(2);
+    setTimeout(function () {
+      console.log(3);
+      setTimeout(function () {
+        console.log(4);
+      }, 1000);
+    }, 1000);
+  }, 1000);
+}, 1000);
