@@ -456,34 +456,69 @@ Array methods:
 // setTimeout, setInterval, fetch, XMLHttpRequest, file reading,
 // request animation frame
 
-// 1. new Promise
-// 2. Executor
+function sleep(ms) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, ms);
+  });
+}
 
-// 1. Pendding
-// 2. Fulfilled
-// 3. Rejected
-
-// Memory leak
-
-var promise = new Promise(
-  // Excutor
-  function (resolve, reject) {
-    // Logic
-    // Thành công: resolve()
-    // Thất bại: reject()
-
-    // Fake call API
-    reject('Co loi!');
-  }
-);
-
-promise
-  .then(function (courses) {
-    console.log(courses);
+sleep(1000)
+  .then(function () {
+    console.log(1);
+    return sleep(1000);
   })
-  .catch(function (error) {
-    console.log(error);
+  .then(function () {
+    console.log(2);
+    return sleep(1000);
   })
-  .finally(function () {
-    console.log('Done!');
+  .then(function () {
+    console.log(3);
+    return sleep(1000);
+  })
+  .then(function () {
+    console.log(4);
+    return sleep(1000);
+  });
+
+function hell(value, cb) {
+  cb(value);
+}
+
+// ko su dung Promise dan den tao ra callback hell :<
+
+hell(1, function (valueFromA) {
+  hell(valueFromA + 1, function (valueFromB) {
+    hell(valueFromB + 1, function (valueFromC) {
+      hell(valueFromC + 1, function (valueFromD) {
+        console.log(valueFromD + 1);
+      });
+    });
+  });
+});
+
+// Su dung Promise se tao ra doan code de doc hon va van dam bao logic
+function notHell(value) {
+  return new Promise(function (resovle) {
+    resolve(value);
+  });
+}
+
+notHell(1)
+  .then(function (value) {
+    return value + 1;
+  })
+  .then(function (value) {
+    return value + 1;
+  })
+  .then(function (value) {
+    return value + 1;
+  })
+  .then(function (value) {
+    return value + 1;
+  })
+  .then(function (value) {
+    return value + 1;
+  })
+  .then(function (value) {
+    console.log(value + 1);
   });
