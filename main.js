@@ -507,43 +507,72 @@ var comments = [
 // 3.Promise
 // 4.DOM
 
-function getComments() {
-  return new Promise(function (resolve) {
-    setTimeout(function () {
-      resolve(comments);
-    }, 1000);
-  });
-}
+// 1. Front-end: Xay dung giao dien nguoi dung
 
-function getUsersByIds(userIds) {
-  return new Promise(function (resolve) {
-    var result = users.filter(function (user) {
-      return userIds.includes(user.id);
-    });
-    setTimeout(function () {
-      resolve(result);
-    }, 1000);
-  });
-}
+// 2. Back-end: Xay dung logic xu ly + Co so du lieu
 
-getComments()
-  .then(function (comments) {
-    var userIds = comments.map(function (comments) {
-      return comments.user_id;
-    });
-    return getUsersByIds(userIds).then(function (users) {
-      return { users: users, comments: comments };
-    });
-  })
-  .then(function (data) {
-    var commentBlock = document.getElementById('comment-block');
+// API (URL)=> Application programming interface
+// Cong giao tiep giua cac phan mem
 
-    var html = '';
-    data.comments.forEach(function (comment) {
-      var user = data.users.find(function (user) {
-        return user.id === comment.user_id;
-      });
-      html += `<li>${user.name}: ${comment.content}</li>`;
-    });
-    commentBlock.innerHTML = html;
-  });
+// Backend (OK)=> API(URL) => Fetch => JSON/XML
+// => JSON.parse => JavaScript types
+// => Render ra giao dien voi HTML
+var postAPI = 'https://jsonplaceholder.typicode.com/posts';
+
+fetch(postAPI).then(function (response) {
+  return response.json();
+}).then(function (posts) {
+  console.log(posts);
+}).catch(function (error) {
+  console.log(error);
+}).finally(function () {
+  console.log('Done');
+}).then(function (posts) {
+  console.log(posts);
+}).catch(function (error) {
+  console.log(error);
+}).finally(function () {
+  console.log('Done');
+}).then(function (posts) {
+  console.log(posts);
+}).catch(function (error) {
+  console.log(error);
+}).finally(function () {
+  console.log('Done');
+}).then(function (posts) {
+  console.log(posts);
+}).catch(function (error) {
+  console.log(error);
+}).finally(function () {
+  console.log('Done');
+}).then(function (posts) {
+  console.log(posts);
+}).catch(function (error) {
+  console.log(error);
+}).finally(function () {
+  console.log('Done');
+}).then(function (posts) {
+  console.log(posts);
+}).catch(function (error) {
+  console.log(error);
+}).finally(function () {
+  console.log('Done');
+}).then(function (posts) {
+  console.log(posts);
+}).catch(function (error) {
+  console.log(error);
+}).finally(function () {
+  console.log('Done');
+}).then(function (posts) {
+  console.log(posts);
+}).catch(function (error) {
+  console.log(error);
+}).finally(function () {
+  console.log('Done');
+}).then(function (posts) {
+  console.log(posts);
+}).catch(function (error) {
+  console.log(error);
+}).finally(function () {
+  console.log('Done');
+}).then(function (
