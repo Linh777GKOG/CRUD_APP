@@ -864,3 +864,32 @@ function sayHello() {
 var sayHelloClosure = sayHello();
 sayHelloClosure(); // 'Hello, world'
 
+function sayHello(name, callback) {
+  var myName = name.toUpperCase() + ", Hello";
+  return callback(myName);
+}
+
+var result = sayHello("Khoa", function (arg) {
+  return arg;
+})
+
+alert(result)
+
+var keywords = ["Khoa", "codelearn", "Học lập trình", "codelearn.io"];
+
+// Lặp qua từng phần tử và xử lí trong hàm callback
+keywords.forEach(function (eachName, index) {
+  console.log(index + 1 + ". " eachName);
+})
+
+function doSomething() {
+  alert('vao');
+
+}
+
+function something(doCallback) {
+  doCallback();
+}
+
+something(doSomething);
+
