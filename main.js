@@ -600,3 +600,40 @@ var obj = {
 
 obj.ageInfo = 25;
 alert(obj.ageInfo);
+
+// Một đối tượng đã có tên ob, thêm cho nó setter, getter có tên namepro
+Object.defineProperty(ob, 'name', {
+  set: function (x) {
+    // code setter ở đây
+  },
+  get: function () {
+    // CODE getter ở đây
+  },
+});
+
+function person(age) {
+  this.age = 0;
+  Object.defineProperty(this, 'ageInfo', {
+    set: function (age) {
+      console.log('setter - ' + age);
+      this.age = age;
+    },
+    get: function () {
+      console.log('getter');
+      return 'Thông tin tuổi: ' + this.age;
+    },
+  });
+}
+
+var obj = new Person(0);
+obj.ageInfo = 25;
+alert(obj.ageInfo);
+
+const obj = {
+  userName: 'Khoa',
+  hello() {
+    console.log(`My name is ${this.userName}`);
+  },
+};
+
+obj.hello();
