@@ -637,3 +637,40 @@ const obj = {
 };
 
 obj.hello();
+
+var fruit = { name: 'apple ' };
+var fruitbear = { name: 'apple' };
+
+fruit == fruitbear; // return false
+fruit === fruitbear; // return false
+
+// Two variables, a single object
+var fruit = { name: 'apple' };
+var fruitbear = fruit; // assign fruit object reference to fruitbear
+
+// here fruit and fruitbear are pointing to same object
+
+fruit == fruitbear; //return true
+fruit === fruitbear; // return true
+
+fruit.name = 'grape';
+console.log(fruitbear); // yield {name: "grape"} instead of {name: "apple"}
+
+// constructor function là một phương thức đặc biệt dùng để tạo 1 object vả được tạo ở trong class
+
+class Polygon {
+  constructor() {
+    this.name = 'Polygon';
+  }
+}
+
+const poly1 = new Polygon();
+
+console.log(poly1.name);
+// expected output: "Polygon"
+
+class Square extends Polygon {
+  constructor(length) {
+    //
+  }
+}
