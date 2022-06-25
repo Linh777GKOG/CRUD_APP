@@ -535,3 +535,11 @@ api.getUser('pikalong', function (err, user) {
       // ...
   })
 })
+
+api
+.getUser('pikalong')
+.then((user) => api.getPostOfUser(user))
+.then((posts) => api.getCommentsOfPosts(posts))
+.cat((err) => {
+  throw err
+})
