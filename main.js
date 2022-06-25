@@ -690,3 +690,35 @@ const hello = function sayHello() {
 function doSomething() {
   // Do something
 }
+
+function getWebsite() {
+  console.log('https://codelearn.io/');
+}
+
+  function funName(param_1, ..., param_n) {
+    //code
+  }
+
+
+function getSum(a,b) {
+  console.log("Tong: " + (a+ b))
+}
+
+function funName(param_1 = value_1, ..., param_n = value_n) {
+  //code 
+}
+
+function getSum(a = 5, b = 10) {
+  console.log("Tong: " + (a+ b))
+}
+
+function getSum(a, b ) {
+  return a + b;
+}
+function sayHello () {
+  console.log("Hello World")
+
+
+}
+
+sayHello();
