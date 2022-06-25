@@ -811,3 +811,27 @@ var multiply = (x, y) => {
   return x * y;
 }
 // => var multiply = (x, y) => x * y;
+
+// ES6
+var phraseSplitterEs5 = function phraseSplitter(phrase) {
+  return phrase.split(' ');
+
+}
+
+// ES6
+var phraseSplitterEs6 = phrase => phrase.split(" ");
+
+console.log(phraseSplitterEs6("Love Codelearn")); // ["Love", "Codelearn"]
+
+// ES5 
+var hello = function sayHello() {
+  console.log("Hello World");
+
+}
+
+// ES6
+var hello = () => {
+  console.log("Hello World");
+}
+
+hello();
