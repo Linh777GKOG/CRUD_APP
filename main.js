@@ -521,25 +521,11 @@ var comments = [
 var postAPI = 'https://jsonplaceholder.typicode.com/posts';
 
 // stream
-fetch(postAPI).then(function (response) {
-  return response.json();
-});
-
-// promise là một cơ chế trong Js giúp bạn thực thi tác vụ bất đồng bộ
-// mà ko rơi vào callback hell hay pyramid of doom => callback long nhau
-api.getUser('pikalong', function (err, user) {
-  if (err) throw err
-  api.getPostOfUser(user, function(err, posts) {
-    if (err) throw err
-    api.getCommentsOfPosts(posts, function(err, comments) {
-      // ...
+fetch(postAPI)
+  .then(function (response) {
+    return response.json();
+    // JSON.parse: JSON => JavaScript types
   })
-})
-
-api
-.getUser('pikalong')
-.then((user) => api.getPostOfUser(user))
-.then((posts) => api.getCommentsOfPosts(posts))
-.cat((err) => {
-  throw err
-})
+  .then(function (posts) {
+    console.log(posts);
+  });
