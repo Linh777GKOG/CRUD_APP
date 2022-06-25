@@ -917,4 +917,11 @@ if (!('fetch' in window)) {
 
 // We can safely use fetch from now on
 
-//
+fetch('example/example.json')
+.then(function(response) {
+  // Do stuff with the response
+})
+.catch(function(error) {
+  console.log('Looks like there was a problem: \n', error);
+})
+
