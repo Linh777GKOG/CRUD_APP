@@ -722,3 +722,12 @@ function sayHello () {
 }
 
 sayHello();
+
+console.log(getAreaOfSquare(5));
+
+// ...
+function getAreaOfSquare(n) {
+  return n*n; 
+}
+
+
