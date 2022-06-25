@@ -925,3 +925,13 @@ fetch('example/example.json')
   console.log('Looks like there was a problem: \n', error);
 })
 
+fetch('example/example.json')
+.then(function(response) {
+  if(!response.ok) {
+    throw Error(response.statusText);
+  }
+  // Do stuff with the response
+})
+.catch(function(error) {
+  console.log('Looks like there was a problem: \n', error);
+})
