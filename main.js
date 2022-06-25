@@ -893,3 +893,11 @@ function something(doCallback) {
 
 something(doSomething);
 
+function showPopup(callback) {
+  if (typeof callback !== 'function') {
+    alert('Bạn phải truyền vào là một function');
+    return false;
+  }
+  // do something
+}
+
