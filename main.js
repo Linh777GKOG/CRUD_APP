@@ -730,4 +730,40 @@ function getAreaOfSquare(n) {
   return n*n; 
 }
 
+// function hoisting chỉ hoạt động với cách khai báo hàm thông thường
+// (function declaration) - function hoisting không hoạt động với các 
+// được khai báo bằng biểu thức hàm (function expression)
 
+console.log(getAreaOfSquare); // ReferenceError: getAreaOfSquare is not defined
+console.log(getAreaOfSquare(5)); // ReferenceError: getAreaOfSquare is not defined
+getAreaOfSquare = function (n) {
+  return n * n;
+
+}
+
+function factorial(n) {
+  if ((n == 0) || (n == 1)) 
+  return 1;
+  else 
+  return (n * factorial(n-1));
+}
+
+var a, b, c;
+a = factorial(1); // a gets the value 1
+b = factorial(2); // b gets the value 2
+c = factorial(3); // c gets the value 6 
+
+// Các biến sau được định nghĩa trong phạm vi global scope
+var num1 = 20,
+    num2 = 3,
+    name = "Khoa";
+    
+// Hàm này được định nghĩa trong phạm vi global scope
+function multiply() {
+  function num1 * num2;
+
+}
+
+multiply(); // Returns 60
+
+// Một ví dụ hàm lồng nhau
