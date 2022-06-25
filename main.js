@@ -674,3 +674,19 @@ class Square extends Polygon {
     //
   }
 }
+
+function sayHello() {
+  console.log('Hello World');
+}
+
+const sayHello = function () {
+  console.log('Hello World');
+};
+
+const hello = function sayHello() {
+  console.log('Hello world');
+};
+
+function doSomething() {
+  // Do something
+}
