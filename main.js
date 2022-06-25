@@ -901,3 +901,12 @@ function showPopup(callback) {
   // do something
 }
 
+var personInfo = {
+  name: 'Khoa',
+  setName: function (name) {
+    this.name = name;
+  }
+  
+
+}
+
