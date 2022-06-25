@@ -517,62 +517,86 @@ var comments = [
 // Backend (OK)=> API(URL) => Fetch => JSON/XML
 // => JSON.parse => JavaScript types
 // => Render ra giao dien voi HTML
+
 var postAPI = 'https://jsonplaceholder.typicode.com/posts';
 
-fetch(postAPI).then(function (response) {
-  return response.json();
-}).then(function (posts) {
-  console.log(posts);
-}).catch(function (error) {
-  console.log(error);
-}).finally(function () {
-  console.log('Done');
-}).then(function (posts) {
-  console.log(posts);
-}).catch(function (error) {
-  console.log(error);
-}).finally(function () {
-  console.log('Done');
-}).then(function (posts) {
-  console.log(posts);
-}).catch(function (error) {
-  console.log(error);
-}).finally(function () {
-  console.log('Done');
-}).then(function (posts) {
-  console.log(posts);
-}).catch(function (error) {
-  console.log(error);
-}).finally(function () {
-  console.log('Done');
-}).then(function (posts) {
-  console.log(posts);
-}).catch(function (error) {
-  console.log(error);
-}).finally(function () {
-  console.log('Done');
-}).then(function (posts) {
-  console.log(posts);
-}).catch(function (error) {
-  console.log(error);
-}).finally(function () {
-  console.log('Done');
-}).then(function (posts) {
-  console.log(posts);
-}).catch(function (error) {
-  console.log(error);
-}).finally(function () {
-  console.log('Done');
-}).then(function (posts) {
-  console.log(posts);
-}).catch(function (error) {
-  console.log(error);
-}).finally(function () {
-  console.log('Done');
-}).then(function (posts) {
-  console.log(posts);
-}).catch(function (error) {
-  console.log(error);
-}).finally(function () {
-  console.log('Done');
-}).then(function (
+let promise = new Promise(function (resolve, reject) {});
+
+const dog = {};
+
+const cat = new Object();
+
+const horse = Object.create({});
+
+get = object.property;
+object.property = set;
+
+let hello;
+let world;
+
+// Old way
+const obj = {
+  hello: hello,
+  world: world,
+};
+
+// Modern way
+const obj = {
+  hello,
+  world,
+};
+
+const x = 'khoa';
+
+const obj = {
+  [x]: 07,
+};
+
+obj.khoa;
+
+delete obj.hello;
+delete obj.world;
+
+// Hàm khởi tạo đối tượng
+function person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.changeName = function (name) {
+    this.name = name;
+  };
+}
+
+// Tạo đối tượng
+var p = new person('Khoa', 19);
+
+p.changeName('Van');
+
+function person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.yearOfBirth = bornYear; // Gán phương thức bên ngoài
+}
+
+// Hàm bên ngoài hàm tạo, hàm này được gán vào đối tượng qua hàm tạo ở trên
+function bornYear() {
+  return 2020 - this.age;
+}
+
+var p = new person('Khoa', 19);
+document.write(p.yeraOfBirth());
+
+var obj = {
+  age: 0,
+  set ageInfo(age) {
+    console.log('setter - ' + age);
+    this.age = age;
+  },
+
+  get ageInfo() {
+    console.log('getter');
+    return 'Thong tin tuoi: ' + this.age;
+  },
+};
+
+obj.ageInfo = 25;
+alert(obj.ageInfo);
