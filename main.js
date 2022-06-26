@@ -738,49 +738,77 @@ Array methods:
 // // delete person.lastName; // Xoa truong lastName
 // // person.lName = 'Just adding'; // Them truong lName
 
-// // console.log(person.lastName); // undefined
-// // console.log(person.lName); // Just kidding
+// // // console.log(person.lastName); // undefined
+// // // console.log(person.lName); // Just kidding
 
-// var person = {
-//   firstName: 'Hoang',
-//   lastName: 'Pham',
-//   showName: function () {
-//     console.log(this.firstName + ' ' + this.lastName);
-//   },
+// // var person = {
+// //   firstName: 'Hoang',
+// //   lastName: 'Pham',
+// //   showName: function () {
+// //     console.log(this.firstName + ' ' + this.lastName);
+// //   },
+// // };
+
+// // // Serialize se lam mat method, chi giu cac property
+// // JSON.stringify(person);// '{"firstName": "Hoang", "lastName": "Pham"}
+
+// // var jsonString = '{firstName: "Hoang", lastName: "Pham"}';
+// // var psn = JSON.parse(jsonString); // Chuyen string thanh object
+// // console.log(psn.firstName); // Hoang
+// // console.log(psn.lastName); // Pham
+// // prototype nom na la khuon hoac la cha cua mot object
+
+// // Hàm ajax chay bat dong bo, do do gia tri Image la undefined
+
+// // Truyen callback vao ham ajax
+// var callback = function (image) {
+//   console.log(image);
 // };
 
-// // Serialize se lam mat method, chi giu cac property
-// JSON.stringify(person);// '{"firstName": "Hoang", "lastName": "Pham"}
+// ajax.get('gaixinh.info', callback);
 
-// var jsonString = '{firstName: "Hoang", lastName: "Pham"}';
-// var psn = JSON.parse(jsonString); // Chuyen string thanh object
-// console.log(psn.firstName); // Hoang
-// console.log(psn.lastName); // Pham
-// prototype nom na la khuon hoac la cha cua mot object
+// // Co the viet gon nhu sau
+// ajax.get('gaixinh.info', function (image) {
+//   console.log(image);
+// });
 
-// Hàm ajax chay bat dong bo, do do gia tri Image la undefined
+// var xe = xin_me_mua_xe(); // Cho ca nam moi co xe
+// var gai = cho_gai_di_choi(xe); // Lay xe cho gai di choi
+// var abcd = cho_gai_vao_hotel(y); // Di choi xong cho gai di dau do
 
-// Truyen callback vao ham ajax
-var callback = function (image) {
-  console.log(image);
-};
+// // Ma phai su dung dong callback "gom ghiec", tao thanh callback hell
+// xin_me_mua_xe(function (xe) {
+//   cho_gai_di_choi(xe, function (gai) {
+//     cho_gai_vao_hotel(hotel, function (z) {
+//       // Lam gi do, ai biet
+//     });
+//   });
+// });
 
-ajax.get('gaixinh.info', callback);
-
-// Co the viet gon nhu sau
-ajax.get('gaixinh.info', function (image) {
-  console.log(image);
-});
-
-var xe = xin_me_mua_xe(); // Cho ca nam moi co xe
-var gai = cho_gai_di_choi(xe); // Lay xe cho gai di choi
-var abcd = cho_gai_vao_hotel(y); // Di choi xong cho gai di dau do
-
-// Ma phai su dung dong callback "gom ghiec", tao thanh callback hell
-xin_me_mua_xe(function (xe) {
-  cho_gai_di_choi(xe, function (gai) {
-    cho_gai_vao_hotel(hotel, function (z) {
-      // Lam gi do, ai biet
-    });
+// Ham nay tra ra mot loi hua chu khong phai chiec BMW
+function hua_cho_co() {
+  return Promise((thuc_hien_loi_hua, that_hua) => {
+    // Sau 1 thoi gian dai dai daiiiiiii
+    // Neu vui bo me se thuc hien loi hua
+    if (vui) {
+      thuc_hien_loi_hua('Xe BMW');
+      // Luc nay trang thai cua loi hua la fulfilled
+    } else {
+      that_hua('Xe dap');
+      // Luc nay trang thai cua loi hua la rejected
+    }
   });
-});
+}
+
+// Loi hua bay gio dang la pendding
+// Neu duoc thuc hien, ban co   "Xe BMW"
+// Neu bi reject, ban co "Xe dap"
+var promise = huu_cho_co();
+
+promise
+  .then((xe_bmw) => {
+    console.log('Duoc chiec BMW vui qua ');
+  })
+  .catch((xe_dap) => {
+    console.log('Duoc chiec xe dap...');
+  });
