@@ -581,16 +581,39 @@ Array methods:
 //   // Noi dung function
 // }
 
-function chia_het_cho_3(number) {
-  if (number % 3 == 0) {
-    return true;
-  }
-  return false;
-}
+// function chia_het_cho_3(number) {
+//   if (number % 3 == 0) {
+//     return true;
+//   }
+//   return false;
+// }
 
-var chia_het_cho_3 = (number) => {
-  if (number % 3 == 0) {
-    return true;
+// var chia_het_cho_3 = (number) => {
+//   if (number % 3 == 0) {
+//     return true;
+//   }
+//   return false;
+// };
+
+// khai báo hàm
+function kiem_tra_nam_nhuan(nam) {
+  // nếu năm chia hết cho 100
+  // thì kiểm tra nó có chia hết cho 400 hay không
+  if (nam % 100 == 0) {
+    // neu chia het cho 400 thi la nam nhuan
+    if (num % 400 == 0) {
+      alert(nam + ' la nam nhuan');
+    } else {
+      // nguoc lai khong phai nam nhuan
+      alert(nam + ' Ko phai nam nhuan');
+    }
+  } else if (nam % 4 == 0) {
+    // truong hop nay chia het cho 4 thi la nam nhuan
+    alert(nam + ' la nam nhuan');
+  } else {
+    // cuoi cung truong hop khong phai nam nhuan
+    alert(nam + 'ko phai la nam nhuan');
   }
-  return false;
-};
+}
+// su dung
+kiem_tra_nam_nhuan(4);
