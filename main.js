@@ -759,5 +759,28 @@ Array methods:
 // prototype nom na la khuon hoac la cha cua mot object
 
 // Hàm ajax chay bat dong bo, do do gia tri Image la undefined
-var Image = ajax.get('gaixinh.info');
-console.log(Image);
+
+// Truyen callback vao ham ajax
+var callback = function (image) {
+  console.log(image);
+};
+
+ajax.get('gaixinh.info', callback);
+
+// Co the viet gon nhu sau
+ajax.get('gaixinh.info', function (image) {
+  console.log(image);
+});
+
+var xe = xin_me_mua_xe(); // Cho ca nam moi co xe
+var gai = cho_gai_di_choi(xe); // Lay xe cho gai di choi
+var abcd = cho_gai_vao_hotel(y); // Di choi xong cho gai di dau do
+
+// Ma phai su dung dong callback "gom ghiec", tao thanh callback hell
+xin_me_mua_xe(function (xe) {
+  cho_gai_di_choi(xe, function (gai) {
+    cho_gai_vao_hotel(hotel, function (z) {
+      // Lam gi do, ai biet
+    });
+  });
+});
