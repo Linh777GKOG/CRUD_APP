@@ -581,162 +581,183 @@ Array methods:
 //   // Noi dung function
 // }
 
-// // function chia_het_cho_3(number) {
-// //   if (number % 3 == 0) {
-// //     return true;
-// //   }
-// //   return false;
-// // }
+// // // function chia_het_cho_3(number) {
+// // //   if (number % 3 == 0) {
+// // //     return true;
+// // //   }
+// // //   return false;
+// // // }
 
-// // var chia_het_cho_3 = (number) => {
-// //   if (number % 3 == 0) {
-// //     return true;
-// //   }
-// //   return false;
+// // // var chia_het_cho_3 = (number) => {
+// // //   if (number % 3 == 0) {
+// // //     return true;
+// // //   }
+// // //   return false;
+// // // };
+
+// // // // // khai báo hàm
+// // // // function kiem_tra_nam_nhuan(nam) {
+// // // //   // nếu năm chia hết cho 100
+// // // //   // thì kiểm tra nó có chia hết cho 400 hay không
+// // // //   if (nam % 100 == 0) {
+// // // //     // neu chia het cho 400 thi la nam nhuan
+// // // //     if (num % 400 == 0) {
+// // // //       alert(nam + ' la nam nhuan');
+// // // //     } else {
+// // // //       // nguoc lai khong phai nam nhuan
+// // // //       alert(nam + ' Ko phai nam nhuan');
+// // // //     }
+// // // //   } else if (nam % 4 == 0) {
+// // // //     // truong hop nay chia het cho 4 thi la nam nhuan
+// // // //     alert(nam + ' la nam nhuan');
+// // // //   } else {
+// // // //     // cuoi cung truong hop khong phai nam nhuan
+// // // //     alert(nam + 'ko phai la nam nhuan');
+// // // //   }
+// // // // }
+// // // // // su dung
+// // // // kiem_tra_nam_nhuan(4);
+
+// // // // khai bao ham
+// // // function kiem_tra_nam_nhuan(nam) {
+// // //   // neu nam chia het cho 100
+// // //   // thi kiem tra no co chia het cho 400 hay khong
+// // //   if (nam % 100 == 0) {
+// // //     // neu chia het cho 400 thi la nam nhuan
+// // //     if (nam % 400 == 0) {
+// // //       return true;
+// // //     } else {
+// // //       //  nguoc lai ko phai nam nhuan
+// // //       return false;
+// // //     }
+// // //   } else if (nam % 4 == 0) {
+// // // //     // truong hop chia het cho 4 thi la nam nhuan
+// // // //     return true;
+// // // //   } else {
+// // // //     // cuoi cung truong hop khong phai nam nhuan
+// // // //     return false;
+// // // //   }
+// // // // }
+
+// // // // // su dung
+// // // // var flag = kiem_tra_nam_nhuan(4);
+
+// // // // if (flag) {
+// // // //   alert(' la nam nhuan');
+// // // // } else {
+// // // //   alert('Ko phai la nam nhuan');
+// // // // }
+
+// // // function A() {
+// // //   // code
+// // // }
+
+// // // // Ham B co mot tham so callback
+// // // function B(callback) {
+// // //   callback();
+// // // }
+
+// // // // Goi ham B va truyen tham so la ham A
+// // // B(A);
+
+// // // var person = {
+// // //   firstName: 'Hoang',
+// // //   lastName: 'Pham',
+// // //   showname: function() {
+// // //     console.log(this.firstName + ' ' + this.lastName);
+// // //   }
+// // // }
+// // // Cach 1: Object literal
+// // // khai bao toan bo cac truong va ham
+
+// // var person = {
+// //   firstName: 'Hoang',
+// //   lastName: 'Pham',
+// //   showName: function () {
+// //     console.log(this.firstName + ' ' + this.lastName);
+// //   },
 // // };
 
-// // // khai báo hàm
-// // function kiem_tra_nam_nhuan(nam) {
-// //   // nếu năm chia hết cho 100
-// //   // thì kiểm tra nó có chia hết cho 400 hay không
-// //   if (nam % 100 == 0) {
-// //     // neu chia het cho 400 thi la nam nhuan
-// //     if (num % 400 == 0) {
-// //       alert(nam + ' la nam nhuan');
-// //     } else {
-// //       // nguoc lai khong phai nam nhuan
-// //       alert(nam + ' Ko phai nam nhuan');
-// //     }
-// //   } else if (nam % 4 == 0) {
-// //     // truong hop nay chia het cho 4 thi la nam nhuan
-// //     alert(nam + ' la nam nhuan');
-// //   } else {
-// //     // cuoi cung truong hop khong phai nam nhuan
-// //     alert(nam + 'ko phai la nam nhuan');
+// // // Cach 2: Object constructor
+// // var psn = new Object();
+// // psn.firstName = 'Hoang';
+// // psn.lastName = 'Pham';
+// // psn.showName = function () {
+// //   console.log(this.firstName + '' + this.lastName);
+// // };
+
+// // function Person(firstName, lastName) {
+// //   this.firstName = firstName;
+// //   this.lastName = lastName;
+// //   this.showName = function () {
+// //     console.log(this.firstName + ' ' + this.lastName);
+// //   };
+// // }
+
+// // // Khi muon goi object person chi can goi constructor
+// // var psn1 = new Person('Hoang', 'Pham');
+// // var psn2 = new Person('Hoang', 'Nguyen');
+
+// // // Co the dung Prototype (Da phan dung constructor pattern)
+
+// // function Person() {}
+// // Person.prototype.firstName = 'Hoang';
+// // Person.prototype.lastName = 'Pham';
+// // Person.prototype.showName = function () {
+// //   console.log(this.firstName + ' ' + this.lastName);
+// // };
+
+// // // Object duoc tao se co san cac truong firstName, lastName
+// // // va ham showName
+// // var psn1 = new Person();
+// // console.log(psn1.firstName); // Hoang
+// // psn1.showName; // Hoang Pham
+
+// // var person = {
+// //   firstName: 'Hoang',
+// //   lastName: 'Pham',
+// //   50: 'Hi', // Property co ten la so, ko dung DotNotation duoc
+// //   showName: function() {
+// //     console.log(this.firstName + ' ' + this.lastName);
 // //   }
 // // }
-// // // su dung
-// // kiem_tra_nam_nhuan(4);
 
-// // khai bao ham
-// function kiem_tra_nam_nhuan(nam) {
-//   // neu nam chia het cho 100
-//   // thi kiem tra no co chia het cho 400 hay khong
-//   if (nam % 100 == 0) {
-//     // neu chia het cho 400 thi la nam nhuan
-//     if (nam % 400 == 0) {
-//       return true;
-//     } else {
-//       //  nguoc lai ko phai nam nhuan
-//       return false;
-//     }
-//   } else if (nam % 4 == 0) {
-// //     // truong hop chia het cho 4 thi la nam nhuan
-// //     return true;
-// //   } else {
-// //     // cuoi cung truong hop khong phai nam nhuan
-// //     return false;
-// //   }
+// // console.log(person.firstName); // Hoang
+// // console.log(person['firstName']); // Hoang
+
+// // console.log(person.50); // Bi loi
+// // console.log(person['50']); // Hi
+
+// // console.log(person.showName()); // Hoang Pham
+// // console.log(person['showName']()); // Hoang Pham
+
+// // for(var prop in person) {
+// //   console.log(prop); // firstName, lastName, showName
 // // }
 
-// // // su dung
-// // var flag = kiem_tra_nam_nhuan(4);
+// // delete person.lastName; // Xoa truong lastName
+// // person.lName = 'Just adding'; // Them truong lName
 
-// // if (flag) {
-// //   alert(' la nam nhuan');
-// // } else {
-// //   alert('Ko phai la nam nhuan');
-// // }
-
-// function A() {
-//   // code
-// }
-
-// // Ham B co mot tham so callback
-// function B(callback) {
-//   callback();
-// }
-
-// // Goi ham B va truyen tham so la ham A
-// B(A);
+// // console.log(person.lastName); // undefined
+// // console.log(person.lName); // Just kidding
 
 // var person = {
 //   firstName: 'Hoang',
 //   lastName: 'Pham',
-//   showname: function() {
+//   showName: function () {
 //     console.log(this.firstName + ' ' + this.lastName);
-//   }
-// }
-// Cach 1: Object literal
-// khai bao toan bo cac truong va ham
+//   },
+// };
 
-var person = {
-  firstName: 'Hoang',
-  lastName: 'Pham',
-  showName: function () {
-    console.log(this.firstName + ' ' + this.lastName);
-  },
-};
+// // Serialize se lam mat method, chi giu cac property
+// JSON.stringify(person);// '{"firstName": "Hoang", "lastName": "Pham"}
 
-// Cach 2: Object constructor
-var psn = new Object();
-psn.firstName = 'Hoang';
-psn.lastName = 'Pham';
-psn.showName = function () {
-  console.log(this.firstName + '' + this.lastName);
-};
+// var jsonString = '{firstName: "Hoang", lastName: "Pham"}';
+// var psn = JSON.parse(jsonString); // Chuyen string thanh object
+// console.log(psn.firstName); // Hoang
+// console.log(psn.lastName); // Pham
+// prototype nom na la khuon hoac la cha cua mot object
 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.showName = function () {
-    console.log(this.firstName + ' ' + this.lastName);
-  };
-}
-
-// Khi muon goi object person chi can goi constructor
-var psn1 = new Person('Hoang', 'Pham');
-var psn2 = new Person('Hoang', 'Nguyen');
-
-// Co the dung Prototype (Da phan dung constructor pattern)
-
-function Person() {}
-Person.prototype.firstName = 'Hoang';
-Person.prototype.lastName = 'Pham';
-Person.prototype.showName = function () {
-  console.log(this.firstName + ' ' + this.lastName);
-};
-
-// Object duoc tao se co san cac truong firstName, lastName
-// va ham showName
-var psn1 = new Person();
-console.log(psn1.firstName); // Hoang
-psn1.showName; // Hoang Pham
-
-var person = {
-  firstName: 'Hoang',
-  lastName: 'Pham',
-  50: 'Hi', // Property co ten la so, ko dung DotNotation duoc
-  showName: function() {
-    console.log(this.firstName + ' ' + this.lastName);
-  }
-}
-
-console.log(person.firstName); // Hoang
-console.log(person['firstName']); // Hoang
-
-console.log(person.50); // Bi loi
-console.log(person['50']); // Hi
-
-console.log(person.showName()); // Hoang Pham
-console.log(person['showName']()); // Hoang Pham
-
-for(var prop in person) {
-  console.log(prop); // firstName, lastName, showName
-}
-
-delete person.lastName; // Xoa truong lastName
-person.lName = 'Just adding'; // Them truong lName
-
-console.log(person.lastName); // undefined
-console.log(person.lName); // Just kidding
+// Hàm ajax chay bat dong bo, do do gia tri Image la undefined
+var Image = ajax.get('gaixinh.info');
+console.log(Image);
