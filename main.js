@@ -518,24 +518,45 @@ var comments = [
 // => JSON.parse => JavaScript types
 // => Render ra giao dien voi HTML
 
-var postAPI = 'https://jsonplaceholder.typicode.com/posts';
+function name_of_function(var1, var2, var3,...) {
+  // Some code
+}
 
-// stream
-fetch(postAPI)
-  .then(function (response) {
-    return response.json();
-    // JSON.parse: JSON => JavaScript types
-  })
-  .then(function (posts) {
-    var htmls = posts.map(function (post) {
-      return `<li>
-           <h2>${post.title}</h2> 
-               <p>${post.body}</p> 
-      </li>`;
-    });
-    var html = htmls.join('');
-    document.getElementById('post-block').innerHTML = html;
-  })
-  .catch(function (err) {
-    alert('Co loi');
-  });
+function check_number(number) {
+  if (number % 2 == 0) {
+    alert(number + ' là số chẵn');
+  }
+  else {
+    alert(number + 'số lẻ')
+  }
+
+}
+
+check_number(1);
+check_number(2);
+check_number(3);
+check_number(4);
+check_number(5);
+
+function tinh_tong(a, b) {
+  // tra ve ket qua la a + b
+  return a + b;
+}
+
+var so1 = 1;
+var so2 = 2;
+
+// truyen so1 va so2 vao ham
+var ketqua = tinh_tong(so1, so2)
+
+alert(ketqua)
+
+function tinh_tong(a, b) {
+  document.write('Tong la ' + (a + b));
+}
+
+var so1 = 1;
+var so2 = 2;
+
+// truyen so1 va so2 vao ham
+tinh_tong(so1, so2)
