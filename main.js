@@ -461,102 +461,136 @@ Array methods:
 // 3. Promise.al
 // Thư viện: output luôn luôn là một promise
 
-var users = [
-  {
-    id: 1,
-    name: 'Kien Dam',
-  },
-  {
-    id: 2,
-    name: 'Linh Vu',
-  },
-  {
-    id: 3,
-    name: 'Hung Dam',
-  },
+// var users = [
+//   {
+//     id: 1,
+//     name: 'Kien Dam',
+//   },
+//   {
+//     id: 2,
+//     name: 'Linh Vu',
+//   },
+//   {
+//     id: 3,
+//     name: 'Hung Dam',
+//   },
 
-  // ...
-];
+//   // ...
+// ];
 
-var comments = [
-  {
-    id: 1,
-    user_id: 1,
-    content: 'Anh Sơn chưa ra video :(',
-  },
-  {
-    id: 2,
-    user_id: 2,
-    content: 'Vừa ra xong em ơi!',
-  },
-  {
-    id: 3,
-    user_id: 1,
-    content: 'Cam on anh ^^',
-  },
-];
+// var comments = [
+//   {
+//     id: 1,
+//     user_id: 1,
+//     content: 'Anh Sơn chưa ra video :(',
+//   },
+//   {
+//     id: 2,
+//     user_id: 2,
+//     content: 'Vừa ra xong em ơi!',
+//   },
+//   {
+//     id: 3,
+//     user_id: 1,
+//     content: 'Cam on anh ^^',
+//   },
+// ];
 
-// 1. Lay comments
-// 2. Tu comments lay ra user_id
-// Tu user_id lay ra user tuong ung
+// // 1. Lay comments
+// // 2. Tu comments lay ra user_id
+// // Tu user_id lay ra user tuong ung
 
-// Fake API
+// // Fake API
 
-// 1.Array
-// 2.Function, callback
-// 3.Promise
-// 4.DOM
+// // 1.Array
+// // 2.Function, callback
+// // 3.Promise
+// // 4.DOM
 
-// 1. Front-end: Xay dung giao dien nguoi dung
+// // 1. Front-end: Xay dung giao dien nguoi dung
 
-// 2. Back-end: Xay dung logic xu ly + Co so du lieu
+// // 2. Back-end: Xay dung logic xu ly + Co so du lieu
 
-// API (URL)=> Application programming interface
-// Cong giao tiep giua cac phan mem
+// // API (URL)=> Application programming interface
+// // Cong giao tiep giua cac phan mem
 
-// Backend (OK)=> API(URL) => Fetch => JSON/XML
-// => JSON.parse => JavaScript types
-// => Render ra giao dien voi HTML
+// // Backend (OK)=> API(URL) => Fetch => JSON/XML
+// // => JSON.parse => JavaScript types
+// // => Render ra giao dien voi HTML
 
-function name_of_function(var1, var2, var3,...) {
-  // Some code
-}
+// function name_of_function(var1, var2, var3,...) {
+//   // Some code
+// }
 
-function check_number(number) {
-  if (number % 2 == 0) {
-    alert(number + ' là số chẵn');
+// function check_number(number) {
+//   if (number % 2 == 0) {
+//     alert(number + ' là số chẵn');
+//   }
+//   else {
+//     alert(number + 'số lẻ')
+//   }
+
+// }
+
+// check_number(1);
+// check_number(2);
+// check_number(3);
+// check_number(4);
+// check_number(5);
+
+// function tinh_tong(a, b) {
+//   // tra ve ket qua la a + b
+//   return a + b;
+// }
+
+// var so1 = 1;
+// var so2 = 2;
+
+// // truyen so1 va so2 vao ham
+// var ketqua = tinh_tong(so1, so2)
+
+// alert(ketqua)
+
+// // function tinh_tong(a, b) {
+// //   document.write('Tong la ' + (a + b));
+// // }
+
+// var so1 = 1;
+// var so2 = 2;
+
+// // truyen so1 va so2 vao ham
+// tinh_tong(so1, so2)
+
+// function showMessage(message) {
+//   // Nếu message ko dược truyền vào hoặc giá trị rỗng
+//   // thì sẽ được thay thế bằng giá trị 'ko có tin nhắn'
+//   message = message || 'Ko co tin nhan <br/>';
+//   document.write(message);
+// }
+
+// // c1: ko truyen tham so
+// showMessage();
+
+// // c2: truyen tham so
+// showMessage('CHao mung thang coder');
+// var name_of_function = (var1, var2, var3, ...) => {
+//   // Noi dung function
+// }
+
+// function name_of_function(var1, var2, var3, ...) {
+//   // Noi dung function
+// }
+
+function chia_het_cho_3(number) {
+  if (number % 3 == 0) {
+    return true;
   }
-  else {
-    alert(number + 'số lẻ')
+  return false;
+}
+
+var chia_het_cho_3 = (number) => {
+  if (number % 3 == 0) {
+    return true;
   }
-
-}
-
-check_number(1);
-check_number(2);
-check_number(3);
-check_number(4);
-check_number(5);
-
-function tinh_tong(a, b) {
-  // tra ve ket qua la a + b
-  return a + b;
-}
-
-var so1 = 1;
-var so2 = 2;
-
-// truyen so1 va so2 vao ham
-var ketqua = tinh_tong(so1, so2)
-
-alert(ketqua)
-
-function tinh_tong(a, b) {
-  document.write('Tong la ' + (a + b));
-}
-
-var so1 = 1;
-var so2 = 2;
-
-// truyen so1 va so2 vao ham
-tinh_tong(so1, so2)
+  return false;
+};
