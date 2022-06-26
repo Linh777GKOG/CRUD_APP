@@ -202,6 +202,7 @@ Array methods:
 // 10. Mistakes
 // 11. Performance
 
-for (var i = 100; i > 0; i -= 5) {
-  console.log(i);
+function deQuy() {
+  deQuy();
 }
+deQuy();
