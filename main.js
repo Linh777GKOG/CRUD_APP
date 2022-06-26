@@ -581,39 +581,69 @@ Array methods:
 //   // Noi dung function
 // }
 
-// function chia_het_cho_3(number) {
-//   if (number % 3 == 0) {
-//     return true;
+// // function chia_het_cho_3(number) {
+// //   if (number % 3 == 0) {
+// //     return true;
+// //   }
+// //   return false;
+// // }
+
+// // var chia_het_cho_3 = (number) => {
+// //   if (number % 3 == 0) {
+// //     return true;
+// //   }
+// //   return false;
+// // };
+
+// // khai báo hàm
+// function kiem_tra_nam_nhuan(nam) {
+//   // nếu năm chia hết cho 100
+//   // thì kiểm tra nó có chia hết cho 400 hay không
+//   if (nam % 100 == 0) {
+//     // neu chia het cho 400 thi la nam nhuan
+//     if (num % 400 == 0) {
+//       alert(nam + ' la nam nhuan');
+//     } else {
+//       // nguoc lai khong phai nam nhuan
+//       alert(nam + ' Ko phai nam nhuan');
+//     }
+//   } else if (nam % 4 == 0) {
+//     // truong hop nay chia het cho 4 thi la nam nhuan
+//     alert(nam + ' la nam nhuan');
+//   } else {
+//     // cuoi cung truong hop khong phai nam nhuan
+//     alert(nam + 'ko phai la nam nhuan');
 //   }
-//   return false;
 // }
+// // su dung
+// kiem_tra_nam_nhuan(4);
 
-// var chia_het_cho_3 = (number) => {
-//   if (number % 3 == 0) {
-//     return true;
-//   }
-//   return false;
-// };
-
-// khai báo hàm
+// khai bao ham
 function kiem_tra_nam_nhuan(nam) {
-  // nếu năm chia hết cho 100
-  // thì kiểm tra nó có chia hết cho 400 hay không
+  // neu nam chia het cho 100
+  // thi kiem tra no co chia het cho 400 hay khong
   if (nam % 100 == 0) {
     // neu chia het cho 400 thi la nam nhuan
-    if (num % 400 == 0) {
-      alert(nam + ' la nam nhuan');
+    if (nam % 400 == 0) {
+      return true;
     } else {
-      // nguoc lai khong phai nam nhuan
-      alert(nam + ' Ko phai nam nhuan');
+      //  nguoc lai ko phai nam nhuan
+      return false;
     }
   } else if (nam % 4 == 0) {
-    // truong hop nay chia het cho 4 thi la nam nhuan
-    alert(nam + ' la nam nhuan');
+    // truong hop chia het cho 4 thi la nam nhuan
+    return true;
   } else {
     // cuoi cung truong hop khong phai nam nhuan
-    alert(nam + 'ko phai la nam nhuan');
+    return false;
   }
 }
+
 // su dung
-kiem_tra_nam_nhuan(4);
+var flag = kiem_tra_nam_nhuan(4);
+
+if (flag) {
+  alert(' la nam nhuan');
+} else {
+  alert('Ko phai la nam nhuan');
+}
