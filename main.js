@@ -712,3 +712,31 @@ Person.prototype.showName = function () {
 var psn1 = new Person();
 console.log(psn1.firstName); // Hoang
 psn1.showName; // Hoang Pham
+
+var person = {
+  firstName: 'Hoang',
+  lastName: 'Pham',
+  50: 'Hi', // Property co ten la so, ko dung DotNotation duoc
+  showName: function() {
+    console.log(this.firstName + ' ' + this.lastName);
+  }
+}
+
+console.log(person.firstName); // Hoang
+console.log(person['firstName']); // Hoang
+
+console.log(person.50); // Bi loi
+console.log(person['50']); // Hi
+
+console.log(person.showName()); // Hoang Pham
+console.log(person['showName']()); // Hoang Pham
+
+for(var prop in person) {
+  console.log(prop); // firstName, lastName, showName
+}
+
+delete person.lastName; // Xoa truong lastName
+person.lName = 'Just adding'; // Them truong lName
+
+console.log(person.lastName); // undefined
+console.log(person.lName); // Just kidding
