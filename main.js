@@ -202,10 +202,23 @@ Array methods:
 // 10. Mistakes
 // 11. Performance
 
-function deQuy() {
-  deQuy();
-}
-deQuy();
+var listCoursesBlock = document.querySelector('#list-courses');
 
-// 1. Xac dinh diem dung
-// 2. Logic handle  => Tao ra diem dung
+var coursesAPI = 'http://localhost:3000/courses';
+
+function start() {
+  getCourses(function (courses) {
+    console.log(courses);
+  });
+}
+
+start();
+
+// Functions
+function getCourses(callback) {
+  fetch(coursesAPI)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(callback);
+}
