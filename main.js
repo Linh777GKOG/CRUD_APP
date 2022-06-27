@@ -206,6 +206,8 @@ var coursesAPI = 'http://localhost:3000/courses';
 
 function start() {
   getCourses(renderCourses);
+
+  handleCreateForm();
 }
 
 start();
@@ -228,4 +230,12 @@ function renderCourses(courses) {
     </li>`;
   });
   listCoursesBlock.innerHTML = htmls.join('');
+}
+
+function handleCreateForm() {
+  var createBtn = document.querySelector('#create');
+  createBtn.onclick = function () {
+    var name = document.querySelector('input[name="name"]').value;
+    console.log(name);
+  };
 }
