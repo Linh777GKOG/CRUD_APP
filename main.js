@@ -206,3 +206,6 @@ function deQuy() {
   deQuy();
 }
 deQuy();
+
+// 1. Xac dinh diem dung
+// 2. Logic handle  => Tao ra diem dung
